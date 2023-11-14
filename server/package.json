@@ -13,8 +13,9 @@
   "dependencies": {
     "@apollo/server": "^4.7.1",
     "express": "^4.17.2",
+    "faker": "^6.6.6",
     "graphql": "^16.6.0",
-    "mongoose": "^7.0.2"
+    "mongoose": "^7.6.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
