@@ -9,12 +9,13 @@ import Home from './pages/Home';
 import Product from './pages/Product';
 import SignIn from './pages/SignIn';
 import Checkout from './pages/Checkout';
+import Signup from './pages/Signup.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    // errorElement: <NotFound />,
+     errorElement: <NotFound />,
     children: [
       {
         index: true,
@@ -28,7 +29,10 @@ const router = createBrowserRouter([
       }, {
         path: '/checkout',
         element: <Checkout />
-      }
+      }, {
+        path: '/signup',
+        element: <Signup />
+      },
     ],
   },
 ]);
