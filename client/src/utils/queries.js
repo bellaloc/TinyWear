@@ -18,6 +18,9 @@ export const QUERY_SINGLE_PROFILE = gql`
     profile(userId: $userId) {
       _id
       email
+    }
+}
+      `
 
 export const GET_CLOTHING_ITEMS = gql`
   query GetClothingItems {
