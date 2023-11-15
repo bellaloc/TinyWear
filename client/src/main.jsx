@@ -2,27 +2,31 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
-import Home from './pages/Home';
-import Matchup from './pages/Matchup';
-import Vote from './pages/Vote';
-import NotFound from './pages/NotFound';
-
+//import Home from './pages/Home';
+import CheckoutButton from './components/CheckoutBtn.jsx';
+import Cancel from './components/Cancel.jsx';
+import Success from './components/Success.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <NotFound />,
     children: [
       {
         index: true,
-        element: <Home />
+        element: <CheckoutButton />
       }, {
-        path: '/matchup',
-        element: <Matchup />
+        path: '/success',
+        element: <Success />
       }, {
-        path: '/matchup/:id',
-        element: <Vote />
-      },
+        path: '/cancelled',
+        element: <Cancel />
+      }, 
+      // {
+      //   path: '/checkout',
+      //   element: <CheckoutButton />
+      // }, 
+
+      
     ],
   },
 ]);

@@ -1,29 +1,31 @@
-const { Tech, Matchup } = require('../models');
+
+const stripe = require('stripe')('sk_test_51OCV4QCQg4jIgzVLmIXR1EHzyC683Sq3PFcYPir1dTubCZa9Gh72p07JztTuNc3RG4cFasNLBTQ9htQmXEXFbkD400VuGlJwX9')
+
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
-    },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
-    },
-  },
-  Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
-    },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
-    },
-  },
-};
+    createCheckoutSession: async () => {
+      const session = await stripe.checkout.sessions.create({
+        line_items: [
+          {
+            price: 'price_1OCWuhCQg4jIgzVLcyP1bSDA',
+            quantity: 1
+           
+          }
+        ],
+          mode: 'payment',
+          success_url: ('/success'),
+          cancel_url: ('/cancelled')
+      });
+      return JSON.stringify({
+        url: session.url
+      })
+    }
+  }
+  }
 
+
+    
 module.exports = resolvers;
+
+
