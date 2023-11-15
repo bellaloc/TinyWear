@@ -2,10 +2,18 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import App from './App.jsx';
+<<<<<<< HEAD
 import Matchup from './pages/Matchup';
 import Vote from './pages/Vote';
 import NotFound from './pages/NotFound';
 import Example from './pages/SignIn.jsx';
+=======
+import NotFound from './pages/NotFound';
+import Home from './pages/Home';
+import Product from './pages/Product';
+import SignIn from './pages/SignIn';
+import Checkout from './pages/Checkout';
+>>>>>>> main
 
 const router = createBrowserRouter([
   {
@@ -17,12 +25,15 @@ const router = createBrowserRouter([
         index: true,
         element: <signUp/>
       }, {
-        path: '/matchup',
-        element: <Matchup />
+        path: '/signin',
+        element: <SignIn />
       }, {
-        path: '/matchup/:id',
-        element: <Vote />
-      },
+        path: '/product/:id',
+        element: <Product />
+      }, {
+        path: '/checkout',
+        element: <Checkout />
+      }
     ],
   },
 ]);

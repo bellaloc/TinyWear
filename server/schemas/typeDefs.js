@@ -1,25 +1,30 @@
-const typeDefs = `
-  type Tech {
+// schemas/typeDefs.js
+const { gql } = require('apollo-server');
+
+const typeDefs = gql`
+  type Clothing {
     _id: ID!
+    category: String!
+    age: Int!
+    gender: String!
     name: String!
+    price: Float!
   }
 
-  type Matchup {
-    _id: ID!
-    tech1: String!
-    tech2: String!
-    tech1_votes: Int
-    tech2_votes: Int
+  input ClothingInput {
+    category: String!
+    age: Int!
+    gender: String!
+    name: String!
+    price: Float!
   }
 
   type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
+    clothing(category: String, age: Int, gender: String): [Clothing]
   }
 
   type Mutation {
-    createMatchup(tech1: String!, tech2: String!): Matchup
-    createVote(_id: String!, techNum: Int!): Matchup
+    addClothing(input: ClothingInput): Clothing
   }
 `;
 

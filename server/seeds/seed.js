@@ -1,14 +1,43 @@
-const db = require('../config/connection');
-const { Tech } = require('../models');
-const cleanDB = require('./cleanDB');
+// seeds/seed.js
+const faker = require('faker');
+const Clothing = require('../models/Clothing');
 
-const techData = require('./techData.json');
+const generateClothingData = () => {
+  const categories = ['shirt', 'pants', 'sets'];
+  const ages = [2, 3, 4];
+  const genders = ['boy', 'girl'];
+  const clothingData = [];
 
-db.once('open', async () => {
-  await cleanDB('Tech', 'teches');
+  for (let i = 0; i < 20; i++) {
+    const category = faker.random.arrayElement(categories);
+    const age = faker.random.arrayElement(ages);
+    const gender = faker.random.arrayElement(genders);
+    const name = faker.commerce.productName();
+    const price = faker.random.number({ min: 10, max: 50 });
 
-  await Tech.insertMany(techData);
+    clothingData.push({
+      category,
+      age,
+      gender,
+      name,
+      price,
+    });
+  }
 
-  console.log('Technologies seeded!');
-  process.exit(0);
-});
+  return clothingData;
+};
+
+const seedDatabase = async () => {
+  try {
+    await Clothing.deleteMany({});
+    const clothingData = generateClothingData();
+    await Clothing.insertMany(clothingData);
+    console.log('Seed data successfully added!');
+  } catch (error) {
+    console.error('Error seeding database:', error);
+  } finally {
+    process.exit();
+  }
+};
+
+seedDatabase();

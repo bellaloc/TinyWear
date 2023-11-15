@@ -1,5 +1,14 @@
+// import { useState } from 'react';
+// import { Link } from 'react-router-dom';
+// import { useMutation } from '@apollo/client';
+// import { LOGIN_USER } from '../utils/mutations';
+
+// import Auth from '../utils/auth';
+
+// Signin form 
 // https://tailwindui.com/components/application-ui/forms/sign-in-forms
 
+<<<<<<< HEAD
 export default function signUp() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -16,6 +25,64 @@ export default function signUp() {
                 alt=""
               />
             </a>
+=======
+const Signin = (props) => {
+
+  // const [formState, setFormState] = useState({ email: '', password: '' });
+  // const [login, { error, data }] = useMutation(LOGIN_USER);
+
+  // // update state based on form input changes
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
+
+  //   setFormState({
+  //     ...formState,
+  //     [name]: value,
+  //   });
+  // };
+
+  // // submit form
+  // const handleFormSubmit = async (event) => {
+  //   event.preventDefault();
+  //   console.log(formState);
+  //   try {
+  //     const { data } = await login({
+  //       variables: { ...formState },
+  //     });
+
+  //     Auth.login(data.login.token);
+  //   } catch (e) {
+  //     console.error(e);
+  //   }
+
+  //   // clear form values
+  //   setFormState({
+  //     email: '',
+  //     password: '',
+  //   });
+  // };
+// export default function Signin() {
+    return (
+      <>
+        {/*
+          This example requires updating your template:
+  
+          ```
+          <html class="h-full bg-white">
+          <body class="h-full">
+          ```
+        */}
+        <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+          <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+            <img
+              className="mx-auto h-10 w-auto"
+              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              alt="Your Company"
+            />
+            <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+              Sign in to your account
+            </h2>
+>>>>>>> main
           </div>
           <div className="flex lg:hidden">
             <button
@@ -132,6 +199,7 @@ export default function signUp() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <div
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
           aria-hidden="true"
@@ -148,3 +216,11 @@ export default function signUp() {
     </div>
   )
 }
+=======
+      </>
+    )
+  }
+  
+
+  export default Signin;
+>>>>>>> main
