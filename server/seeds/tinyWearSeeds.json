@@ -1,35 +1,24 @@
 [
   {
-    "name": "JavaScript"
+    "category": "Shirts",
+    "age": 2,
+    "gender": "Boy",
+    "name": "Dino Print Shirt",
+    "price": 14.99
   },
   {
-    "name": "HTML"
+    "category": "Pants",
+    "age": 3,
+    "gender": "Girl",
+    "name": "Floral Leggings",
+    "price": 19.99
   },
   {
-    "name": "CSS"
-  },
-  {
-    "name": "Node.js"
-  },
-  {
-    "name": "Express.js"
-  },
-  {
-    "name": "MySQL"
-  },
-  {
-    "name": "MongoDB"
-  },
-  {
-    "name": "React"
-  },
-  {
-    "name": "GraphQL"
-  },
-  {
-    "name": "Sequelize"
-  },
-  {
-    "name": "Handlebars.js"
+    "category": "Sets",
+    "age": 4,
+    "gender": "Boy",
+    "name": "Adventure Set",
+    "price": 24.99
   }
+
 ]

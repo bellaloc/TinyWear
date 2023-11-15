@@ -6,16 +6,18 @@ const clothingSchema = new mongoose.Schema({
     type: String,
     enum: ['shirt', 'pants', 'sets'],
     required: true,
-    //index: true,
+    index: true,
   },
   age: {
     type: Number,
     required: true,
+    index: true,
   },
   gender: {
     type: String,
     enum: ['boy', 'girl'],
     required: true,
+    index: true,
   },
   name: {
     type: String,

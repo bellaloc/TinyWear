@@ -1,27 +1,33 @@
-const { Tech, Matchup } = require('../models');
+// schemas/resolvers.js
+const Clothing = require('../models/Clothing');
 
 const resolvers = {
   Query: {
-    tech: async () => {
-      return Tech.find({});
-    },
-    matchups: async (parent, { _id }) => {
-      const params = _id ? { _id } : {};
-      return Matchup.find(params);
+    clothing: async (_, { category, age, gender }) => {
+      try {
+        const filter = {};
+        if (category) filter.category = category;
+        if (age) filter.age = age;
+        if (gender) filter.gender = gender;
+
+        const clothing = await Clothing.find(filter);
+        return clothing;
+      } catch (error) {
+        console.error('Error retrieving clothing data:', error);
+        throw new Error('Internal Server Error');
+      }
     },
   },
+
   Mutation: {
-    createMatchup: async (parent, args) => {
-      const matchup = await Matchup.create(args);
-      return matchup;
-    },
-    createVote: async (parent, { _id, techNum }) => {
-      const vote = await Matchup.findOneAndUpdate(
-        { _id },
-        { $inc: { [`tech${techNum}_votes`]: 1 } },
-        { new: true }
-      );
-      return vote;
+    addClothing: async (_, { input }) => {
+      try {
+        const clothing = await Clothing.create(input);
+        return clothing;
+      } catch (error) {
+        console.error('Error adding clothing:', error);
+        throw new Error('Internal Server Error');
+      }
     },
   },
 };
