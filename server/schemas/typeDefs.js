@@ -46,7 +46,7 @@ type Shirt {
   type Query {
     users: [User]
     user(email: String!): User
-    allShirts: [Shirt]
+    shirts: [Shirt]
     filteredShirts(_id: ID, size: Int, color: String, gender: String ): Shirt
     clothing(category: String, age: Int, gender: String): [Clothing]
   }

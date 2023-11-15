@@ -1,5 +1,5 @@
 // schemas/resolvers.js
-const { Clothing, User } = require('../models');
+const { Clothing, User, Shirt } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -10,11 +10,11 @@ const resolvers = {
     user: async (parent, { email }) => {
       return User.findOne({ email})
     },
-    allShirts: async () => {
-      return Shirt.find()
+    shirts: async () => {
+      return Shirt.find();
      },
      filteredShirts: async (parent, args) => {
-     return Shirt.findSome(args)
+     return Shirt.find({args})
      },
     clothing: async (_, { category, age, gender }) => {
       try {
