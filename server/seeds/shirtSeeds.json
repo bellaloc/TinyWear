@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Toddler long sleeve T-shirt",
+    "img": "",
+    "size": 1,
+    "gender": "boys",
+    "color": "beige",
+    "price": 1595,
+    "itemdescirption": "Beige long sleeved shirt"
+  },
+  {
+    "name": "Toddler long sleeve T-shirt",
+    "img": "",
+    "size": 2,
+    "gender": "boys",
+    "color": "beige",
+    "price": 1595,
+    "itemdescirption": "Beige long sleeved shirt"
+  },
+  {
+    "name": "Toddler long sleeve T-shirt",
+    "img": "",
+    "size": 3,
+    "gender": "boys",
+    "color": "beige",
+    "price": 1595,
+    "itemdescirption": "Beige long sleeved T-shirt"
+  },
+  {
+    "name": "Toddler Striped Shirt",
+    "img": "",
+    "size": 1,
+    "gender": "boys",
+    "color": "blue",
+    "price": 2495,
+    "itemdescirption": "Striped Heather T-Shirt"
+  },
+  {
+    "name": "Toddler Striped Shirt",
+    "img": "",
+    "size": 2,
+    "gender": "boys",
+    "color": "blue",
+    "price": 2495,
+    "itemdescirption": "Striped Heather T-Shirt"
+  },
+  {
+    "name": "Toddler Striped Shirt",
+    "img": "",
+    "size": 3,
+    "gender": "boys",
+    "color": "blue",
+    "price": 2495,
+    "itemdescirption": "Striped Heather T-Shirt"
+  },
+  {
+    "name": "Toddler T-shirt",
+    "img": "",
+    "size": 1,
+    "gender": "girls",
+    "color": "pink",
+    "price": 1995,
+    "itemdescirption": "Pink Cotton Tee"
+  },
+  {
+    "name": "shirt1",
+    "img": "",
+    "size": 2,
+    "gender": "girls",
+    "color": "pink",
+    "price": 1995,
+    "itemdescirption": "Pink Cotton Tee"
+  },
+  {
+    "name": "shirt1",
+    "img": "",
+    "size": 3,
+    "gender": "girls",
+    "color": "pink",
+    "price": 1995,
+    "itemdescirption": "Pink Cotton Tee"
+  },
+  {
+    "name": "Toddler Love Bug Graphic Tee",
+    "img": "",
+    "size": 1,
+    "gender": "girls",
+    "color": "pink",
+    "price": 3495,
+    "itemdescirption": "Pink long-sleeved shirt with Love Bug"
+  },
+  {
+    "name": "Toddler Love Bug Graphic Tee",
+    "img": "",
+    "size": 2,
+    "gender": "girls",
+    "color": "pink",
+    "price": 3495,
+    "itemdescirption": "Pink long-sleeved shirt with Love Bug"
+  },
+  {
+    "name": "Toddler Love Bug Graphic Tee",
+    "img": "",
+    "size": 3,
+    "gender": "girls",
+    "color": "pink",
+    "price": 3495,
+    "itemdescirption": "Pink long-sleeved shirt with Love Bug"
+  }
+]

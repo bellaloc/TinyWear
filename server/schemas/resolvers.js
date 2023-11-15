@@ -10,6 +10,12 @@ const resolvers = {
     user: async (parent, { email }) => {
       return User.findOne({ email})
     },
+    allShirts: async () => {
+      return Shirt.find()
+     },
+     filteredShirts: async (parent, args) => {
+     return Shirt.findSome(args)
+     },
     clothing: async (_, { category, age, gender }) => {
       try {
         const filter = {};

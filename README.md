@@ -43,7 +43,15 @@ Before you begin, ensure you have met the following requirements:
 
 -Install dependencies:
 
+- npm i
+
 - npm install
+
+- npm run seed 
+
+- npm run build 
+
+- npm run develop
 
 - Set up your MongoDB database and update the connection string in config/connection.js.
 
