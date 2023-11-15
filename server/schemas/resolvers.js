@@ -1,11 +1,15 @@
-
-const stripe = require('stripe')('sk_test_51OCV4QCQg4jIgzVLmIXR1EHzyC683Sq3PFcYPir1dTubCZa9Gh72p07JztTuNc3RG4cFasNLBTQ9htQmXEXFbkD400VuGlJwX9')
 // schemas/resolvers.js
-const Clothing = require('../models/Clothing');
+const { Clothing, User } = require('../models');
+const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    
+    users: async () => {
+      return User.find();
+    },
+    user: async (parent, { email }) => {
+      return User.findOne({ email})
+    },
     clothing: async (_, { category, age, gender }) => {
       try {
         const filter = {};
@@ -20,7 +24,28 @@ const resolvers = {
         throw new Error('Internal Server Error');
       }
     },
+  },
   Mutation: {
+    addUser: async (parent, { email, password }) => {
+      // Creates the user 
+      const user = await User.create({ email, password })
+      // Creates Token
+      const token = signToken(user);
+      return { token, user};
+    },
+    login: async (parent, { email, password }) => {
+      // look up by email
+      const user = await User.findOne({ email });
+      if (!user) {
+        throw AuthenticationError
+      }
+      const correctPw = await user.isCorrectPassword(password) 
+    if (!correctPw) {
+      throw AuthenticationError
+    }
+    const token = signToken(user);  
+    return { token, user}; 
+  },
     addClothing: async (_, { input }) => {
       try {
         const clothing = await Clothing.create(input);
@@ -34,7 +59,7 @@ const resolvers = {
   },
   
 }
-}
+
 
     
 module.exports = resolvers;
