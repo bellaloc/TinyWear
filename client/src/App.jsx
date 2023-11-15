@@ -4,6 +4,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Navbar from "./components/Navbar"
 // import Footer from "./components/Footer"
 
+
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
