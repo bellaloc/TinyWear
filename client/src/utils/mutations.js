@@ -20,6 +20,8 @@ export const LOGIN_USER = gql`
         _id
         name
       }
+    }
+  }
       `
 
 export const CREATE_CLOTHING_ITEM = gql`
