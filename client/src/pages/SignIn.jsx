@@ -1,6 +1,6 @@
 // https://tailwindui.com/components/application-ui/forms/sign-in-forms
 
-export default function Example() {
+export default function signUp() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
