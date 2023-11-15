@@ -1,8 +1,11 @@
+
+const stripe = require('stripe')('sk_test_51OCV4QCQg4jIgzVLmIXR1EHzyC683Sq3PFcYPir1dTubCZa9Gh72p07JztTuNc3RG4cFasNLBTQ9htQmXEXFbkD400VuGlJwX9')
 // schemas/resolvers.js
 const Clothing = require('../models/Clothing');
 
 const resolvers = {
   Query: {
+    
     clothing: async (_, { category, age, gender }) => {
       try {
         const filter = {};
@@ -17,8 +20,6 @@ const resolvers = {
         throw new Error('Internal Server Error');
       }
     },
-  },
-
   Mutation: {
     addClothing: async (_, { input }) => {
       try {
@@ -29,7 +30,13 @@ const resolvers = {
         throw new Error('Internal Server Error');
       }
     },
+    
   },
-};
+  
+}
+}
 
+    
 module.exports = resolvers;
+
+

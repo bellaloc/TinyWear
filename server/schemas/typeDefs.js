@@ -1,7 +1,5 @@
-// schemas/typeDefs.js
-const { gql } = require('apollo-server');
-
-const typeDefs = gql`
+const typeDefs = `
+ 
   type Clothing {
     _id: ID!
     category: String!
@@ -25,6 +23,7 @@ const typeDefs = gql`
 
   type Mutation {
     addClothing(input: ClothingInput): Clothing
+    
   }
 `;
 

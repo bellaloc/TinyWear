@@ -1,3 +1,24 @@
+
+// /*
+//   This example requires some changes to your config:
+  
+//   ```
+//   // tailwind.config.js
+//   module.exports = {
+//     // ...
+//     plugins: [
+//       // ...
+//       require('@tailwindcss/forms'),
+//     ],
+//   }
+//   ```
+// */
+// export default function Example() {
+//     return (
+//       <>
+//         {/*
+//           This example requires updating your template:
+
 // import { useState } from 'react';
 // import { Link } from 'react-router-dom';
 // import { useMutation } from '@apollo/client';
@@ -6,9 +27,11 @@
 // import Auth from '../utils/auth';
 
 // Signin form 
+
 // https://tailwindui.com/components/application-ui/forms/sign-in-forms
 
 const SignIn = (props) => {
+
 
   // const [formState, setFormState] = useState({ email: '', password: '' });
   // const [login, { error, data }] = useMutation(LOGIN_USER);
@@ -46,6 +69,7 @@ const SignIn = (props) => {
 // export default function Signin() {
     return (
       <>
+
         {/*
           This example requires updating your template:
   
@@ -180,3 +204,4 @@ const SignIn = (props) => {
   
 
   export default SignIn;
+
