@@ -1,6 +1,6 @@
 // models/index.js
 const User = require('./User');
-const Shirt = require('./Shirt');
+const Shirt = require('./shirt');
 const Pant = require('./Pant');
 const ClothingSet = require('./ClothingSet');
 
