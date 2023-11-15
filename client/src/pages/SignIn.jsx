@@ -1,81 +1,48 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom'
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../utils/mutations';
 
-// /*
-//   This example requires some changes to your config:
-  
-//   ```
-//   // tailwind.config.js
-//   module.exports = {
-//     // ...
-//     plugins: [
-//       // ...
-//       require('@tailwindcss/forms'),
-//     ],
-//   }
-//   ```
-// */
-// export default function Example() {
-//     return (
-//       <>
-//         {/*
-//           This example requires updating your template:
-
-// import { useState } from 'react';
-// import { Link } from 'react-router-dom';
-// import { useMutation } from '@apollo/client';
-// import { LOGIN_USER } from '../utils/mutations';
-
-// import Auth from '../utils/auth';
-
-// Signin form 
-
-// https://tailwindui.com/components/application-ui/forms/sign-in-forms
+import Auth from '../utils/auth';
 
 const SignIn = (props) => {
+  const [formState, setFormState] = useState({ email: '', password: ''});
+  const [login, {error, data}] = useMutation(LOGIN_USER);
 
-  // const [formState, setFormState] = useState({ email: '', password: '' });
-  // const [login, { error, data }] = useMutation(LOGIN_USER);
+  // update state for login and signup changes
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
-  // // update state based on form input changes
-  // const handleChange = (event) => {
-  //   const { name, value } = event.target;
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
+    // handle submit form 
+    const handleFormSubmit = async (event) => {
+      event.preventDefault()
+    console.log(formState)
+  try {
+    const {data} = await login({
+      variables: { ...formState },
+    });
 
-  //   setFormState({
-  //     ...formState,
-  //     [name]: value,
-  //   });
-  // };
-
-  // // submit form
-  // const handleFormSubmit = async (event) => {
-  //   event.preventDefault();
-  //   console.log(formState);
-  //   try {
-  //     const { data } = await login({
-  //       variables: { ...formState },
-  //     });
-
-  //     Auth.login(data.login.token);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-
-  //   // clear form values
-  //   setFormState({
-  //     email: '',
-  //     password: '',
-  //   });
-  // };
-// export default function Signin() {
+    //Auth token
+    Auth.login(data.login.token);
+  } catch(e) {
+    console.log(e)
+  }   
+  // clearing values on form
+  setFormState({
+    email: '',
+    password: '',
+  
+  });
+  document.location = '/'
+}; 
     return (
       <>
-        {/*
-          This example requires updating your template:
-  
-          ```
-          <html class="h-full bg-white">
-          <body class="h-full">
-          ```
-        */}
+        
         {/* sign in */}
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -84,13 +51,20 @@ const SignIn = (props) => {
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt="Your Company"
             /> */}
+           
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
               Sign in to your account
             </h2>
           </div>
-  
+          
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form className="space-y-6" action="#" method="POST">
+          {data ? (
+              <p>
+                Success! {' '}
+                <Link to="/">Go to homepage.</Link>
+              </p>
+            ) : (
+            <form className="space-y-6" onSubmit={handleFormSubmit} >
               <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                   Email address
@@ -100,7 +74,8 @@ const SignIn = (props) => {
                     id="email"
                     name="email"
                     type="email"
-                    autoComplete="email"
+                    value={formState.email}
+                    onChange={handleChange}
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -118,7 +93,8 @@ const SignIn = (props) => {
                     id="password"
                     name="password"
                     type="password"
-                    autoComplete="current-password"
+                    value={formState.password}
+                    onChange={handleChange}
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -134,6 +110,12 @@ const SignIn = (props) => {
                 </button>
               </div>
             </form>
+            )}
+            {error && (
+              <div className="my-3 p-3 bg-danger text-white">
+                {error.message}
+              </div>
+            )}
           </div>
         </div>
         
