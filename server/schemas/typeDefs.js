@@ -1,7 +1,7 @@
 const typeDefs = `
  
-  type Query {
-    createCheckoutSession: String
+  type Stripe {
+    createCheckoutSession: String [Stripe]
   }
 `;
 

@@ -4,12 +4,12 @@ const stripe = require('stripe')('sk_test_51OCV4QCQg4jIgzVLmIXR1EHzyC683Sq3PFcYP
 
 const resolvers = {
   Query: {
-    createCheckoutSession: async () => {
+    createCheckoutSession: async (loading, {price, quantity} ) => {
       const session = await stripe.checkout.sessions.create({
         line_items: [
           {
-            price: 'price_1OCWuhCQg4jIgzVLcyP1bSDA',
-            quantity: 1
+            price: {price},
+            quantity: {quantity}
            
           }
         ],
