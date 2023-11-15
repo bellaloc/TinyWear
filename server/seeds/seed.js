@@ -43,6 +43,8 @@
 
 const db = require('../config/connection');
 const { User, Shirt } = require('../models');
+const userSeeds = require('./userData.json');
+const pantSeeds = require('./PantData.json');
 const cleanDB = require('./cleanDB');
 const userSeeds = require('./userData.json');
 const shirtSeeds = require('./shirtSeeds.json');
