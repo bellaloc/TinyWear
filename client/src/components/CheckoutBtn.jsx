@@ -1,28 +1,35 @@
 // lazy query = a query that doesnt get ran right away
-import { useLazyQuery } from '@apollo/client';
-import { CHECKOUT } from '../utils/queries';
+import axios from 'axios'
+
+import { useSelector }  from 'react-redux'
+import{ url } from '../../../server/Stripe/index'
 
 
-function checkoutButton() {
 
-    const [startCheckout, { loading, error, data }] = useLazyQuery(CHECKOUT, {
-        
-        onCompleted: (queryData) => {
-            console.log(queryData)
-            let data = JSON.parse(queryData.createCheckoutSession) //the url for stripe url 
-            console.log(data);
-            let checkoutUrl = data
-            window.location.assign(checkoutUrl); // pushed to stripe url
-        }
-    });
-    if (loading) return null;
-    if (error) return `Error! ${error}`;
-    console.log(data);
+const checkoutButton = ({ cartItems }) =>  { 
+
+     const user = useSelector((state) => state.auth)
+
+console.log(cartItems)
+    const handleCheckout = () => {
+       axios.post(`${url}/stripe/create-checkout-session`, {
+       cartItems,
+       userId: user.id
+}).then((res) => {
+    if(res.data.url){
+        window.location.href = res.data.url
+    }
+}).catch((err) => console.log(err.message))
+    }
     return (
-        <button onClick={() => startCheckout()}>
-            Checkout!
-        </button>
-    )
+        <>
+            <button onClick={() => handleCheckout()}> Checkout! </button>
+        </>
+    );
 }
 
 export default checkoutButton
+
+
+// Add buttons to products
+//<checkoutButton cartItems = {cart.cartItems} />

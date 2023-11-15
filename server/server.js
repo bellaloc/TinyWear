@@ -2,7 +2,7 @@ const express = require('express');
 const { ApolloServer } = require('apollo-server-express'); // Updated import
 const { expressMiddleware } = require('apollo-server-express'); // Updated import
 const path = require('path');
-
+const stripe = require("./Stripe/index")
 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
@@ -34,7 +34,7 @@ const startApolloServer = async () => {
   });
 
   app.use('/graphql', expressMiddleware(server));
-
+  app.use("/stripe", stripe);
   // Serve static assets if in production
   if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../client/dist')));
@@ -45,6 +45,9 @@ const startApolloServer = async () => {
     });
   }
 
+
+  
+
   db.once('open', () => {
     app.listen(PORT, () => {
       console.log(`API server running on port ${PORT}!`);
@@ -54,3 +57,4 @@ const startApolloServer = async () => {
 };
 
 startApolloServer();
+

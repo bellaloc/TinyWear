@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 //import Home from './pages/Home';
 import CheckoutButton from './components/CheckoutBtn.jsx';
-import Cancel from './components/Cancel.jsx';
+
 import Success from './components/Success.jsx';
 const router = createBrowserRouter([
   {
@@ -17,14 +17,11 @@ const router = createBrowserRouter([
       }, {
         path: '/success',
         element: <Success />
-      }, {
-        path: '/cancelled',
-        element: <Cancel />
-      }, 
-      // {
-      //   path: '/checkout',
-      //   element: <CheckoutButton />
-      // }, 
+      },  
+       {
+         path: '/checkout',
+         element: <CheckoutButton />
+       }, 
 
       
     ],
