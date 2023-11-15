@@ -20,27 +20,6 @@ const resolvers = {
         throw new Error('Internal Server Error');
       }
     },
-    createCheckoutSession: async (loading, {price, quantity} ) => {
-      const session = await stripe.checkout.sessions.create({
-        line_items: [
-          {
-            price: {price},
-            quantity: {quantity}
-           
-          }
-        ],
-          mode: 'payment',
-          success_url: ('/success'),
-          cancel_url: ('/cancelled')
-      });
-      return JSON.stringify({
-        url: session.url
-      })
-    },
-  },
-  
-
-
   Mutation: {
     addClothing: async (_, { input }) => {
       try {
@@ -54,8 +33,8 @@ const resolvers = {
     
   },
   
-};
-
+}
+}
 
     
 module.exports = resolvers;

@@ -343,12 +343,3 @@ export default function Example() {
   )
 }
 
-<<<<<<< HEAD
-// export default NotFound;
-
-
-
-
-
-=======
->>>>>>> main
