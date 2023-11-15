@@ -32,7 +32,6 @@
 
 const SignIn = (props) => {
 
-
   // const [formState, setFormState] = useState({ email: '', password: '' });
   // const [login, { error, data }] = useMutation(LOGIN_USER);
 
@@ -69,7 +68,6 @@ const SignIn = (props) => {
 // export default function Signin() {
     return (
       <>
-
         {/*
           This example requires updating your template:
   
