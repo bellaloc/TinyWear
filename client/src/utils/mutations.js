@@ -22,6 +22,8 @@ export const LOGIN_USER = gql`
         }
       }
       }
+    }
+  }
       `
 
 export const CREATE_CLOTHING_ITEM = gql`
