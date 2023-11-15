@@ -8,6 +8,7 @@ import Product from './pages/Product';
 import SignIn from './pages/SignIn';
 import CreateAccount from './pages/CreateAccount';
 import Checkout from './pages/Checkout';
+import Signup from './pages/Signup.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,10 @@ const router = createBrowserRouter([
       }, {
         path: '/checkout',
         element: <Checkout />
-      }
+      }, {
+        path: '/signup',
+        element: <Signup />
+      },
     ],
   },
 ]);
