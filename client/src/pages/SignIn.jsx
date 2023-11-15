@@ -109,6 +109,9 @@ const SignIn = () => {
                   Sign in
                 </button>
               </div>
+              <button href='/signup'>
+                <a href='/signup'>Click here to Sign Up!</a>
+              </button>
             </form>
             )}
             {error && (
@@ -116,14 +119,6 @@ const SignIn = () => {
                 {error.message}
               </div>
             )}
-
-            <p className="mt-10 text-center text-sm text-gray-500">
-            Don't have an account?{' '}
-            <a href="/signup" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Click here to create an account. 
-            </a>
-          </p>
-          
           </div>
         </div>
         
