@@ -19,8 +19,8 @@ export const LOGIN_USER = gql`
       profile {
         _id
         name
+        }
       }
-    }
   }
       `
 
