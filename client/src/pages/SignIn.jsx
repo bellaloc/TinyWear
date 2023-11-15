@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // /*
 //   This example requires some changes to your config:
   
@@ -17,6 +18,15 @@
 //       <>
 //         {/*
 //           This example requires updating your template:
+=======
+// https://tailwindui.com/components/application-ui/forms/sign-in-forms
+
+export default function Example() {
+    return (
+      <>
+        {/*
+          This example requires updating your template:
+>>>>>>> main
   
 //           ```
 //           <html class="h-full bg-white">
