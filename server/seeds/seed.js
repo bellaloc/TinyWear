@@ -44,6 +44,7 @@
 const db = require('../config/connection');
 const { User } = require('../models');
 const userSeeds = require('./userData.json');
+const pantSeeds = require('./PantData.json');
 const cleanDB = require('./cleanDB');
 
 db.once('open', async () => {
