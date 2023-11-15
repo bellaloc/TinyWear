@@ -5,7 +5,7 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const SignIn = () => {
+const SignIn = (props) => {
   const [formState, setFormState] = useState({ email: '', password: ''});
   const [login, {error, data}] = useMutation(LOGIN_USER);
 
@@ -118,9 +118,9 @@ const SignIn = () => {
             )}
 
             <p className="mt-10 text-center text-sm text-gray-500">
-            Don't have an account?{' '}
-            <a href="/signup" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Click here to create an account. 
+            Already have an account?{' '}
+            <a href="/signin" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              Click here to log in. 
             </a>
           </p>
           
