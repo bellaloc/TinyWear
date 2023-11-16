@@ -13,9 +13,25 @@ const resolvers = {
     shirts: async () => {
       return Shirt.find();
      },
-     filteredShirts: async (parent, args) => {
-     return Shirt.find({args})
-     },
+     filteredShirts: async (parent, { _id, size, gender, color}) => {
+       try {
+        const filter = {};
+        if (_id) filter._id = _id;
+        if (size) filter.size = size;
+        if (gender) filter.gender = gender;
+        if (color) filter.color = color;
+
+        const shirtsDisplayed = await Shirt.find(filter);
+        return shirtsDisplayed
+       } catch ( error ) {
+        console.error( error);
+       
+    
+
+       }
+      },
+   
+     
     clothing: async (_, { category, age, gender }) => {
       try {
         const filter = {};

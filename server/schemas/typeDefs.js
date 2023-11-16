@@ -20,12 +20,6 @@ type Shirt {
   price: Int
   itemDescription: String
 }
-
-
-
-
-
-
   type Clothing {
     _id: ID!
     category: String!
@@ -47,8 +41,8 @@ type Shirt {
     users: [User]
     user(email: String!): User
     shirts: [Shirt]
-    filteredShirts(_id: ID, size: Int, color: String, gender: String ): Shirt
-    clothing(category: String, age: Int, gender: String): [Clothing]
+    filteredShirts( _id: ID, size: Int, gender: String, color: String): [Shirt]
+    clothing(size: String, age: Int, gender: String): [Clothing]
   }
 
   type Mutation {
