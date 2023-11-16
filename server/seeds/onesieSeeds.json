@@ -33,7 +33,8 @@
       "gender": "boys",
       "color": "blue",
       "price": 19.95, 
-      "description": "Made for the changing season, this relaxed fit set is a cozy new addition to a fall wardrobe."
+      "description": "Made for the changing season, this relaxed fit set is a cozy new addition to a fall wardrobe.",
+      "payBtn": "https://buy.stripe.com/aEU8A15YB3hbglaaEJ"
     },
     {
       "name": "Hoodie Sweat Set",
@@ -42,7 +43,8 @@
       "gender": "boys",
       "color": "blue",
       "price": 19.95, 
-      "description": "Made for the changing season, this relaxed fit set is a cozy new addition to a fall wardrobe."
+      "description": "Made for the changing season, this relaxed fit set is a cozy new addition to a fall wardrobe.",
+      "payBtn": "https://buy.stripe.com/aEU8A15YB3hbglaaEJ"
     },
     {
       "name": "Hoodie Sweat Set",
@@ -51,7 +53,8 @@
       "gender": "boys",
       "color": "blue",
       "price": 19.95, 
-      "description": "Made for the changing season, this relaxed fit set is a cozy new addition to a fall wardrobe."
+      "description": "Made for the changing season, this relaxed fit set is a cozy new addition to a fall wardrobe.",
+      "payBtn": "https://buy.stripe.com/aEU8A15YB3hbglaaEJ"
     },
     {
       "name": "Sweater Outfit Set",
@@ -60,7 +63,8 @@
       "gender": "girls",
       "color": "grey",
       "price": 15.95,
-      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl."
+      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       "name": "Sweater Outfit Set ",
@@ -69,7 +73,8 @@
       "gender": "girls",
       "color": "grey",
       "price": 15.95,
-      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl."
+      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       "name": "Sweater Outfit Set",
@@ -78,7 +83,8 @@
       "gender": "girls",
       "color": "grey",
       "price": 15.95,
-      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl."
+      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       "name": "Favorites Quilted Outfit Set",
@@ -87,7 +93,8 @@
       "gender": "girls",
       "color": "pink",
       "price": 15.95,
-      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie."
+      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       "name": "Favorites Quilted Outfit Set",
@@ -96,7 +103,8 @@
       "gender": "girls",
       "color": "pink",
       "price": 15.95,
-      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie."
+      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       "name": "Favorites Quilted Outfit Set",
@@ -105,6 +113,7 @@
       "gender": "girls",
       "color": "pink",
       "price": 15.95,
-      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie."
+      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     }
   ]
