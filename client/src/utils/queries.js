@@ -35,6 +35,32 @@ query shirts {
     description
   }
 }`
+export const QUERY_PANTS = gql`
+query shirts {
+  shirts {
+    _id
+    name
+    img
+    size
+    gender
+    color
+    price
+    description
+  }
+}`
+export const QUERY_ONESIES = gql`
+query shirts {
+  shirts {
+    _id
+    name
+    img
+    size
+    gender
+    color
+    price
+    description
+  }
+}`
 
 export const QUERY_FILTERED_SHIRTS = gql`
 query filteredShirts ($size: Int) {
