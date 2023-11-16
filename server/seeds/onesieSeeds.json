@@ -1,17 +1,110 @@
 [
-
-{
-    "name": "",
-    "image": "",
-    "size": "T2,T3,T4",
-    "gender": "Male",
-    "Gender": "Girl",
-    "color": "Toddler Pull-On Flare Pants",
-    "price": "",
-    "item description": "2 piece Outfit"
-}
-
-
-
-
-]
+    {
+      "name": "2-Piece Outfit Set",
+      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
+      "gender": "Boy",
+      "price": 24.95,
+      "size": 2,
+      "image": "./images/boys/pants/Everyday-Pull-On-Pants.jpeg",
+      "color": "orange"
+    },
+    {
+      "name": "2-Piece Outfit Set",
+      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
+      "gender": "Boy",
+      "price": 24.95,
+      "size": 3,
+      "image": "./images/boys/pants/Everyday-Pull-On-Pants.jpeg",
+      "color": "orange"
+    },
+    {
+      "name": "2-Piece Outfit Set",
+      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
+      "gender": "Boy",
+      "price": 24.95,
+      "size": 4,
+      "image": "./images/boys/pants/Everyday-Pull-On-Pants.jpeg",
+      "color": "orange"
+    },
+    {
+      "name": "Relaxed Fit Pull-On Joggers",
+      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time.",
+      "gender": "Boy",
+      "price": 19.95, 
+      "size": 2, 
+      "image": "./images/boys/pants/Relaxed-Fit-Pull-On-Joggers.jpeg",
+      "color": "grey"
+    },
+    {
+      "name": "Relaxed Fit Pull-On Joggers",
+      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time.",
+      "gender": "Boy",
+      "price": 19.95, 
+      "size": 3, 
+      "image": "./images/boys/pants/Relaxed-Fit-Pull-On-Joggers.jpeg",
+      "color": "grey"
+    },
+    {
+      "name": "Relaxed Fit Pull-On Joggers",
+      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time.",
+      "gender": "Boy",
+      "price": 19.95, 
+      "size": 4, 
+      "image": "./images/boys/pants/Relaxed-Fit-Pull-On-Joggers.jpeg",
+      "color": "grey"
+    },
+    {
+      "name": "Heart Leggings",
+      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 2, 
+      "image": "./images/girls/pants/Heart-Leggings.jpeg",
+      "color": "multi"
+    },
+    {
+      "name": "Heart Leggings",
+      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 3, 
+      "image": "./images/girls/pants/Heart-Leggings.jpeg",
+      "color": "multi"
+    },
+    {
+      "name": "Heart Leggings",
+      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 4, 
+      "image": "./images/girls/pants/Heart-Leggings.jpeg",
+      "color": "multi"
+    },
+    {
+      "name": "Pull-On Flare Pants",
+      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 2, 
+      "image": "/images/girls/pants/Pull-On-Flare-Pants.png",
+      "color": "pink"
+    },
+    {
+      "name": "Pull-On Flare Pants",
+      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 3, 
+      "image": "/images/girls/pants/Pull-On-Flare-Pants.png",
+      "color": "pink"
+    },
+    {
+      "name": "Pull-On Flare Pants",
+      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 4, 
+      "image": "/images/girls/pants/Pull-On-Flare-Pants.png",
+      "color": "pink"
+    }
+  ]
