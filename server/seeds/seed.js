@@ -52,6 +52,9 @@ db.once('open', async () => {
   try {
     
     await cleanDB('User', 'users');
+    await cleanDB('Pant', 'pants');
+    await cleanDB('Shirt', 'shirts');
+    await cleanDB('Onesie', 'onesies');
     
     await User.create(userSeeds);
     await Shirt.create(shirtSeeds)
