@@ -1,7 +1,7 @@
 [
     {
       "name": "Everyday Pull-On Pants",
-      "img": "./images/boys/pants/Everyday-Pull-On-Pants.jpeg",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168559/Everyday-Pull-On-Pants_wrohs2.jpg",
       "size": 2,
       "gender": "boys",
       "color": "beige",
@@ -10,7 +10,7 @@
     },
     {
       "name": "Everyday Pull-On Pants",
-      "img": "./images/boys/pants/Everyday-Pull-On-Pants.jpeg",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168559/Everyday-Pull-On-Pants_wrohs2.jpg",
       "size": 3,
       "gender": "boys",
       "color": "beige",
@@ -19,7 +19,7 @@
     },
     {
       "name": "Everyday Pull-On Pants",
-      "img": "./images/boys/pants/Everyday-Pull-On-Pants.jpeg",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168559/Everyday-Pull-On-Pants_wrohs2.jpg",
       "size": 4,
       "gender": "boys",
       "color": "beige",
@@ -28,7 +28,7 @@
     },
     {
       "name": "Relaxed Fit Pull-On Joggers",
-      "img": "./images/boys/pants/Relaxed-Fit-Pull-On-Joggers.jpeg",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168560/Relaxed-Fit-Pull-On-Joggers_u2r1b8.jpg",
       "size": 2, 
       "gender": "boys",
       "color": "grey",
@@ -37,7 +37,7 @@
     },
     {
       "name": "Relaxed Fit Pull-On Joggers",
-      "img": "./images/boys/pants/Relaxed-Fit-Pull-On-Joggers.jpeg",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168560/Relaxed-Fit-Pull-On-Joggers_u2r1b8.jpg",
       "size": 3, 
       "gender": "boys",
       "color": "grey",
@@ -46,7 +46,7 @@
     },
     {
       "name": "Relaxed Fit Pull-On Joggers",
-      "img": "./images/boys/pants/Relaxed-Fit-Pull-On-Joggers.jpeg",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168560/Relaxed-Fit-Pull-On-Joggers_u2r1b8.jpg",
       "size": 4, 
       "gender": "boys",
       "color": "grey",
@@ -55,7 +55,7 @@
     },
     {
       "name": "Heart Leggings",
-      "img": "./images/girls/pants/Heart-Leggings.jpeg",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168612/Heart-Leggings_k4ydtz.jpg",
       "size": 2, 
       "gender": "girls",
       "color": "multi",
@@ -64,7 +64,7 @@
     },
     {
       "name": "Heart Leggings",
-      "img": "./images/girls/pants/Heart-Leggings.jpeg",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168612/Heart-Leggings_k4ydtz.jpg",
       "size": 3, 
       "gender": "girls",
       "color": "multi",
@@ -73,7 +73,7 @@
     },
     {
       "name": "Heart Leggings",
-      "img": "./images/girls/pants/Heart-Leggings.jpeg",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168612/Heart-Leggings_k4ydtz.jpg",
       "size": 4, 
       "gender": "girls",
       "color": "multi",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Pull-On Flare Pants",
-      "img": "/images/girls/pants/Pull-On-Flare-Pants.png",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168614/Pull-On-Flare-Pants_pkxikl.png",
       "size": 2, 
       "gender": "girls",
       "color": "pink",
@@ -91,7 +91,7 @@
     },
     {
       "name": "Pull-On Flare Pants",
-      "img": "/images/girls/pants/Pull-On-Flare-Pants.png",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168614/Pull-On-Flare-Pants_pkxikl.png",
       "size": 3, 
       "gender": "girls",
       "color": "pink",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Pull-On Flare Pants",
-      "img": "/images/girls/pants/Pull-On-Flare-Pants.png",
+      "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168614/Pull-On-Flare-Pants_pkxikl.png",
       "size": 4, 
       "gender": "girls",
       "color": "pink",
