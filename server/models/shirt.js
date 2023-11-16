@@ -19,7 +19,7 @@ const shirtSchema = new Schema({
   price: {
     type: Number
   },
-  itemDescription: {
+  description: {
     type: String
   },
 });
