@@ -12,14 +12,12 @@ const resolvers = {
     },
     shirts: async () => {
       console.log("shirts")
-      const shirtData = await Shirt.find();
-      console.log(shirtData)
-      return shirtData
+       return Shirt.find();
      },
-     pants: async () => {
+    pants: async () => {
       return Pant.find();
      },
-     onesies: async () => {
+    onesies: async () => {
       return Onesie.find();
      },
      filteredShirts: async (parent, { _id, size, gender, color}) => {

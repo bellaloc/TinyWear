@@ -28,7 +28,7 @@ type Pant {
   gender: String
   color: String
   price: Float
-  itemDescription: String
+  description: String
 }
 type Onesie {
   _id: ID
@@ -37,33 +37,9 @@ type Onesie {
   size: Int
   gender: String
   color: String
-  price: Int
-  itemDescription: String
+  price: Float
+  description: String
 }
-
-
-
-
-
-
-
-  type Clothing {
-    _id: ID!
-    category: String!
-    age: Int!
-    gender: String!
-    name: String!
-    price: Float!
-  }
-
-  input ClothingInput {
-    category: String!
-    age: Int!
-    gender: String!
-    name: String!
-    price: Float!
-  }
-
   type Query {
     users: [User]
     user(email: String!): User
@@ -73,16 +49,11 @@ type Onesie {
     filteredShirts( _id: ID, size: Int, gender: String, color: String): [Shirt]
     filteredPants( _id: ID, size: Int, gender: String, color: String): [Pant]
     filteredOnesies( _id: ID, size: Int, gender: String, color: String): [Onesie]
-
-    
-    clothing(size: String, age: Int, gender: String): [Clothing]
-  }
-
+   
+}
   type Mutation {
     addUser(email: String!, password: String!): Auth
-    login(email: String!, password: String!): Auth
-    addClothing(input: ClothingInput): Clothing
-    
+    login(email: String!, password: String!): Auth 
   }
 `;
 
