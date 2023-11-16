@@ -5,7 +5,7 @@
       "gender": "Boy",
       "price": 24.95,
       "size": 2,
-      "image": "./images/boys/sets/2-Piece Outfit Set.png",
+      "image": "./images/boys/sets/2-Piece-Outfit-Set.png",
       "color": "orange"
     },
     {
@@ -14,7 +14,7 @@
       "gender": "Boy",
       "price": 24.95,
       "size": 3,
-      "image": "./images/boys/sets/2-Piece Outfit Set.png",
+      "image": "./images/boys/sets/2-Piece-Outfit-Set.png",
       "color": "orange"
     },
     {
@@ -23,7 +23,7 @@
       "gender": "Boy",
       "price": 24.95,
       "size": 4,
-      "image": "./images/boys/sets/2-Piece Outfit Set.png",
+      "image": "./images/boys/sets/2-Piece-Outfit-Set.png",
       "color": "orange"
     },
     {
@@ -32,7 +32,7 @@
       "gender": "Boy",
       "price": 19.95, 
       "size": 2, 
-      "image": "./images/boys/sets/Hoodie Sweat Set.png",
+      "image": "./images/boys/sets/Hoodie-Sweat-Set.png",
       "color": "blue"
     },
     {
@@ -41,7 +41,7 @@
       "gender": "Boy",
       "price": 19.95, 
       "size": 3, 
-      "image": "./images/boys/sets/Hoodie Sweat Set.png",
+      "image": "./images/boys/sets/Hoodie-Sweat-Set.png",
       "color": "blue"
     },
     {
@@ -50,7 +50,7 @@
       "gender": "Boy",
       "price": 19.95, 
       "size": 4, 
-      "image": "./images/boys/sets/Hoodie Sweat Set.png",
+      "image": "./images/boys/sets/Hoodie-Sweat-Set.png",
       "color": "blue"
     },
     {
@@ -59,7 +59,7 @@
       "gender": "Girl",
       "price": 15.95,
       "size": 2, 
-      "image": "./images/girls/sets/Baby Sweater Outfit Set.png",
+      "image": "./images/girls/sets/Baby-Sweater-Outfit-Set.png",
       "color": "grey"
     },
     {
@@ -68,7 +68,7 @@
       "gender": "Girl",
       "price": 15.95,
       "size": 3, 
-      "image": "./images/girls/sets/Baby Sweater Outfit Set.png",
+      "image": "./images/girls/sets/Baby-Sweater-Outfit-Set.png",
       "color": "grey"
     },
     {
@@ -77,7 +77,7 @@
       "gender": "Girl",
       "price": 15.95,
       "size": 4, 
-      "image": "./images/girls/sets/Baby Sweater Outfit Set.png",
+      "image": "./images/girls/sets/Baby-Sweater-Outfit-Set.png",
       "color": "grey"
     },
     {

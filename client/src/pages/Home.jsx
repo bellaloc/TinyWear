@@ -97,6 +97,7 @@ const { loading, data} = useQuery(QUERY_FILTERED_SHIRTS)
 const products = data?.product || [];
 
   return (
+    
     <div className="bg-white">
       <div>
         {/* Mobile filter dialog */}
@@ -325,6 +326,7 @@ const products = data?.product || [];
 
 {/* Products */}
               {/* Product grid */}
+             
               <div className="lg:col-span-3">{/* Your content */}
               <div className="bg-white">
                 <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -353,6 +355,7 @@ const products = data?.product || [];
         </main>
       </div>
     </div>
+    
   )
 }
 
