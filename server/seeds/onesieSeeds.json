@@ -1,0 +1,110 @@
+[
+    {
+      "name": "2-Piece Outfit Set",
+      "description": "Super trendy and super comfy, these pull-on flare Onesie sets are perfect for your little cutie.",
+      "gender": "Boy",
+      "price": 24.95,
+      "size": 2,
+      "image": "./images/boys/sets/2-Piece Outfit Set.png",
+      "color": "orange"
+    },
+    {
+      "name": "2-Piece Outfit Set",
+      "description": "Super trendy and super comfy, these pull-on flare Onesie sets are perfect for your little cutie.",
+      "gender": "Boy",
+      "price": 24.95,
+      "size": 3,
+      "image": "./images/boys/sets/2-Piece Outfit Set.png",
+      "color": "orange"
+    },
+    {
+      "name": "2-Piece Outfit Set",
+      "description": "Super trendy and super comfy, these pull-on flare Onesie sets are perfect for your little cutie.",
+      "gender": "Boy",
+      "price": 24.95,
+      "size": 4,
+      "image": "./images/boys/sets/2-Piece Outfit Set.png",
+      "color": "orange"
+    },
+    {
+      "name": "Hoodie Sweat Set",
+      "description": "Made for the changing season, these relaxed fit Onesie set are a cozy new addition to their fall wardrobe.",
+      "gender": "Boy",
+      "price": 19.95, 
+      "size": 2, 
+      "image": "./images/boys/sets/Hoodie Sweat Set.png",
+      "color": "blue"
+    },
+    {
+      "name": "Hoodie Sweat Set",
+      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe.",
+      "gender": "Boy",
+      "price": 19.95, 
+      "size": 3, 
+      "image": "./images/boys/sets/Hoodie Sweat Set.png",
+      "color": "blue"
+    },
+    {
+      "name": "Hoodie Sweat Set",
+      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe.",
+      "gender": "Boy",
+      "price": 19.95, 
+      "size": 4, 
+      "image": "./images/boys/sets/Hoodie Sweat Set.png",
+      "color": "blue"
+    },
+    {
+      "name": "Baby Sweater Outfit Set",
+      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 2, 
+      "image": "./images/girls/sets/Baby Sweater Outfit Set.png",
+      "color": "grey"
+    },
+    {
+      "name": "Baby Sweater Outfit Set",
+      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 3, 
+      "image": "./images/girls/sets/Baby Sweater Outfit Set.png",
+      "color": "grey"
+    },
+    {
+      "name": "Baby Sweater Outfit Set",
+      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 4, 
+      "image": "./images/girls/sets/Baby Sweater Outfit Set.png",
+      "color": "grey"
+    },
+    {
+      "name": "Favorites Quilted Outfit Set",
+      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 2, 
+      "image": "/images/girls/pants/Pull-On-Flare-Pants.png",
+      "color": "pink"
+    },
+    {
+      "name": "Favorites Quilted Outfit Set",
+      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 3, 
+      "image": "/images/girls/pants/Pull-On-Flare-Pants.png",
+      "color": "pink"
+    },
+    {
+      "name": "Favorites Quilted Outfit Set",
+      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
+      "gender": "Girl",
+      "price": 15.95,
+      "size": 4, 
+      "image": "/images/girls/pants/Pull-On-Flare-Pants.png",
+      "color": "pink"
+    }
+  ]

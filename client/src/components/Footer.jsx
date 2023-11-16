@@ -1,15 +1,3 @@
-
-// const Footer = () => {
-
-//  return (
-//     <>    
-//     </>
-//  )
-// }
-
-
-
-
 import React from "react";
 
 // UI Reference: https://tailwindui.com/components/marketing/sections/footers
@@ -31,10 +19,10 @@ const Footer = ({ theme = "dark" }) => {
         <div className="flex flex-col md:flex-row gap-8 sm:gap-20 ml-6 mr-12">
           <div className="self-center">
             <div className="mb-2 md:mb-6">
-              Making the world a better place through constructing elegant hierachies.
+            Tiny Threads, Big Dreams: Where Fashion Meets Fun for Your Little Ones!
             </div>
 
-            <div className="flex gap-4 text-sm sm:text-lg">
+            {/* <div className="flex gap-4 text-sm sm:text-lg">
               <span>
                 <i className="fa-brands fa-facebook"></i>
               </span>
@@ -50,7 +38,7 @@ const Footer = ({ theme = "dark" }) => {
               <span>
                 <i className="fa-brands fa-instagram"></i>
               </span>
-            </div>
+            </div> */}
           </div>
 
           <div className="mx-auto flex flex-row gap-6 md:gap-12 flex-wrap sm:flex-nowrap">
@@ -73,10 +61,10 @@ const Footer = ({ theme = "dark" }) => {
         </div>
 
         <div
-          className={`mt-8 sm:mt-16 border-t py-7 text-gray-500 text-xs
+          className={`mt-8 sm:mt-16 border-t py-7 text-gray-500 text-xs flex justify-center
           ${theme === "dark" ? "border-t-gray-800" : "border-t-gray-300"} `}
         >
-          &copy; 2020 Your Company, Inc. All rights reserved
+          &copy; 2023 Tiny Wear, Inc. All rights reserved.
         </div>
       </div>
     </>
@@ -84,6 +72,7 @@ const Footer = ({ theme = "dark" }) => {
 };
 
 export default Footer;
+
 
 
 
