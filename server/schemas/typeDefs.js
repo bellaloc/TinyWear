@@ -17,8 +17,8 @@ type Shirt {
   size: Int
   gender: String
   color: String
-  price: Int
-  itemDescription: String
+  price: Float
+  description: String
 }
 type Pant {
   _id: ID
@@ -27,7 +27,7 @@ type Pant {
   size: Int
   gender: String
   color: String
-  price: Int
+  price: Float
   itemDescription: String
 }
 type Onesie {
