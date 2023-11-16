@@ -1,88 +1,88 @@
 [
     {
       "name": "2-Piece Outfit Set",
-      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
+      "description": "Super trendy and super comfy, these pull-on flare Onesie sets are perfect for your little cutie.",
       "gender": "Boy",
       "price": 24.95,
       "size": 2,
-      "image": "./images/boys/pants/Everyday-Pull-On-Pants.jpeg",
+      "image": "./images/boys/sets/2-Piece Outfit Set.png",
       "color": "orange"
     },
     {
       "name": "2-Piece Outfit Set",
-      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
+      "description": "Super trendy and super comfy, these pull-on flare Onesie sets are perfect for your little cutie.",
       "gender": "Boy",
       "price": 24.95,
       "size": 3,
-      "image": "./images/boys/pants/Everyday-Pull-On-Pants.jpeg",
+      "image": "./images/boys/sets/2-Piece Outfit Set.png",
       "color": "orange"
     },
     {
       "name": "2-Piece Outfit Set",
-      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
+      "description": "Super trendy and super comfy, these pull-on flare Onesie sets are perfect for your little cutie.",
       "gender": "Boy",
       "price": 24.95,
       "size": 4,
-      "image": "./images/boys/pants/Everyday-Pull-On-Pants.jpeg",
+      "image": "./images/boys/sets/2-Piece Outfit Set.png",
       "color": "orange"
     },
     {
-      "name": "Relaxed Fit Pull-On Joggers",
-      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time.",
+      "name": "Hoodie Sweat Set",
+      "description": "Made for the changing season, these relaxed fit Onesie set are a cozy new addition to their fall wardrobe.",
       "gender": "Boy",
       "price": 19.95, 
       "size": 2, 
-      "image": "./images/boys/pants/Relaxed-Fit-Pull-On-Joggers.jpeg",
-      "color": "grey"
+      "image": "./images/boys/sets/Hoodie Sweat Set.png",
+      "color": "blue"
     },
     {
-      "name": "Relaxed Fit Pull-On Joggers",
-      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time.",
+      "name": "Hoodie Sweat Set",
+      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe.",
       "gender": "Boy",
       "price": 19.95, 
       "size": 3, 
-      "image": "./images/boys/pants/Relaxed-Fit-Pull-On-Joggers.jpeg",
-      "color": "grey"
+      "image": "./images/boys/sets/Hoodie Sweat Set.png",
+      "color": "blue"
     },
     {
-      "name": "Relaxed Fit Pull-On Joggers",
-      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time.",
+      "name": "Hoodie Sweat Set",
+      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe.",
       "gender": "Boy",
       "price": 19.95, 
       "size": 4, 
-      "image": "./images/boys/pants/Relaxed-Fit-Pull-On-Joggers.jpeg",
-      "color": "grey"
+      "image": "./images/boys/sets/Hoodie Sweat Set.png",
+      "color": "blue"
     },
     {
-      "name": "Heart Leggings",
-      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
+      "name": "Baby Sweater Outfit Set",
+      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
       "gender": "Girl",
       "price": 15.95,
       "size": 2, 
-      "image": "./images/girls/pants/Heart-Leggings.jpeg",
-      "color": "multi"
+      "image": "./images/girls/sets/Baby Sweater Outfit Set.png",
+      "color": "grey"
     },
     {
-      "name": "Heart Leggings",
-      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
+      "name": "Baby Sweater Outfit Set",
+      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
       "gender": "Girl",
       "price": 15.95,
       "size": 3, 
-      "image": "./images/girls/pants/Heart-Leggings.jpeg",
-      "color": "multi"
+      "image": "./images/girls/sets/Baby Sweater Outfit Set.png",
+      "color": "grey"
     },
     {
-      "name": "Heart Leggings",
-      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
+      "name": "Baby Sweater Outfit Set",
+      "description": "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
       "gender": "Girl",
       "price": 15.95,
       "size": 4, 
-      "image": "./images/girls/pants/Heart-Leggings.jpeg",
-      "color": "multi"
+      "image": "./images/girls/sets/Baby Sweater Outfit Set.png",
+      "color": "grey"
     },
     {
-      "name": "Pull-On Flare Pants",
-      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie.",
+      "name": "Favorites Quilted Outfit Set",
+      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
       "gender": "Girl",
       "price": 15.95,
       "size": 2, 
@@ -90,8 +90,8 @@
       "color": "pink"
     },
     {
-      "name": "Pull-On Flare Pants",
-      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie.",
+      "name": "Favorites Quilted Outfit Set",
+      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
       "gender": "Girl",
       "price": 15.95,
       "size": 3, 
@@ -99,8 +99,8 @@
       "color": "pink"
     },
     {
-      "name": "Pull-On Flare Pants",
-      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie.",
+      "name": "Favorites Quilted Outfit Set",
+      "description": "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
       "gender": "Girl",
       "price": 15.95,
       "size": 4, 
