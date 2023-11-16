@@ -3,34 +3,24 @@ const { Schema, model } = require('mongoose');
 const pantSchema = new Schema({
   name: {
     type: String,
-    required: true,
-    minlength: 1,
-  },
-  description: {
-    type: String,
-    required: true,
-    minlength: 1,
-  },
-  gender: {
-    type: String,
-    enum: ['Boy', 'Girl'], 
-    required: true,
-  },
-  price: {
-    type: Number,
-    required: true,
-  },
-  size: {
-    type: Number,
-    required: true,
   },
   img: {
     type: String,
-    required: true,
+  },
+  size: {
+    type: Number,
+  },
+  gender: {
+    type: String
   },
   color: {
-    type: String,
-    required: true,
+    type: String
+  },
+  price: {
+    type: Number
+  },
+  description: {
+    type: String
   },
 });
 

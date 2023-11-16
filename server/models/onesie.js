@@ -1,37 +1,28 @@
 const { Schema, model } = require('mongoose');
 
 const onesieSchema = new Schema({
-  name: {
-    type: String,
-    
-    minlength: 1,
-  },
-  description: {
-    type: String,
-   
-    minlength: 1,
-  },
-  gender: {
-    type: String,
-    
-  },
-  price: {
-    type: Number,
-   
-  },
-  size: {
-    type: Number,
- 
-  },
-  img: {
-    type: String,
- 
-  },
-  color: {
-    type: String,
-   
-  },
-});
+    name: {
+        type: String,
+      },
+      img: {
+        type: String,
+      },
+      size: {
+        type: Number,
+      },
+      gender: {
+        type: String
+      },
+      color: {
+        type: String
+      },
+      price: {
+        type: Number
+      },
+      description: {
+        type: String
+      },
+    });
 
 const Onesie = model('Onesie', onesieSchema);
 

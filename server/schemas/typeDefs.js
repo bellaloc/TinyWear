@@ -68,11 +68,11 @@ type Onesie {
     users: [User]
     user(email: String!): User
     shirts: [Shirt]
-    filteredShirts( _id: ID, size: Int, gender: String, color: String): [Shirt]
-    pants: [Pant]
-    filteredPants( _id: ID, size: Int, gender: String, color: String): [Pant]
     onesies: [Onesie]
-    filteredOnsies( _id: ID, size: Int, gender: String, color: String): [Onesie]
+    pants: [Pant]
+    filteredShirts( _id: ID, size: Int, gender: String, color: String): [Shirt]
+    filteredPants( _id: ID, size: Int, gender: String, color: String): [Pant]
+    filteredOnesies( _id: ID, size: Int, gender: String, color: String): [Onesie]
 
     
     clothing(size: String, age: Int, gender: String): [Clothing]
