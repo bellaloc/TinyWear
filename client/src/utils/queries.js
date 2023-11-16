@@ -20,21 +20,36 @@ export const QUERY_SINGLE_PROFILE = gql`
       email
     }
 }
-      `;
+`
+
+export const QUERY_SHIRTS = gql`
+query shirts {
+  shirts {
+    _id
+    name
+    img
+    size
+    gender
+    color
+    price
+    description
+  }
+}`
+
 export const QUERY_FILTERED_SHIRTS = gql`
-     query shirts($shirtId: ID, $size: size, $gender: gender, $color: color) {
-     filteredShirts(shirtId: $shirtId, size: $size, gender: $gender, color: $color) {
-      _id
-      name
-      img
-      size
-      gender
-      color
-      price
-      itemDescription
-     }
-    }
-    `;
+query filteredShirts ($size: Int) {
+  filteredShirts(size: $size) {
+    _id
+    name
+    img
+    size
+    gender
+    color
+    price
+    itemDescription
+  }
+}
+`
 
 export const GET_CLOTHING_ITEMS = gql`
   query GetClothingItems {

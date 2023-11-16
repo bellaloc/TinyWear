@@ -11,7 +11,10 @@ const resolvers = {
       return User.findOne({ email})
     },
     shirts: async () => {
-      return Shirt.find();
+      console.log("shirts")
+      const shirtData = await Shirt.find();
+      console.log(shirtData)
+      return shirtData
      },
      pants: async () => {
       return Pant.find();

@@ -1,7 +1,7 @@
 [
   {
     "name": "Pocket Henldey Long Sleeve Shirt",
-    "img": "./images/Pocket-Henley.png",
+    "img": "../assets/images/productImages/boys/shirts/Pocket-Henley.png",
     "size": 2,
     "gender": "boys",
     "color": "beige",
