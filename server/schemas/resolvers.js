@@ -25,9 +25,6 @@ const resolvers = {
         return shirtsDisplayed
        } catch ( error ) {
         console.error( error);
-       
-    
-
        }
       },
    
