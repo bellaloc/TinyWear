@@ -20,6 +20,33 @@ type Shirt {
   price: Int
   itemDescription: String
 }
+type Pant {
+  _id: ID
+  name: String
+  img: String
+  size: Int
+  gender: String
+  color: String
+  price: Int
+  itemDescription: String
+}
+type Onesie {
+  _id: ID
+  name: String
+  img: String
+  size: Int
+  gender: String
+  color: String
+  price: Int
+  itemDescription: String
+}
+
+
+
+
+
+
+
   type Clothing {
     _id: ID!
     category: String!
@@ -42,6 +69,12 @@ type Shirt {
     user(email: String!): User
     shirts: [Shirt]
     filteredShirts( _id: ID, size: Int, gender: String, color: String): [Shirt]
+    pants: [Pant]
+    filteredPants( _id: ID, size: Int, gender: String, color: String): [Pant]
+    onesies: [Onesie]
+    filteredOnsies( _id: ID, size: Int, gender: String, color: String): [Onesie]
+
+    
     clothing(size: String, age: Int, gender: String): [Clothing]
   }
 
