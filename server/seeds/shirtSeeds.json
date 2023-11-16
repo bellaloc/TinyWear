@@ -2,15 +2,6 @@
   {
     "name": "Pocket Henldey Long Sleeve Shirt",
     "img": "./images/Pocket-Henley.png",
-    "size": 1,
-    "gender": "boys",
-    "color": "beige",
-    "price": 15.95,
-    "description": "Crafted in super soft slub jersey, this striped henley makes the perfect layer."
-  },
-  {
-    "name": "Pocket Henldey Long Sleeve Shirt",
-    "img": "./images/Pocket-Henley.png",
     "size": 2,
     "gender": "boys",
     "color": "beige",
@@ -27,13 +18,13 @@
     "description": "Crafted in super soft slub jersey, this striped henley makes the perfect layer."
   },
   {
-    "name": "Striped Heather T-Shirt",
-    "img": "./images/Striped-Heather-T-Shirt.png",
-    "size": 1,
+    "name": "Pocket Henldey Long Sleeve Shirt",
+    "img": "./images/Pocket-Henley.png",
+    "size": 4,
     "gender": "boys",
-    "color": "blue",
-    "price": 24.95,
-    "description": "This tee is so easy to throw on and go. It pairs well with jeans, cargos and joggers too! Plus the long sleeves will keep him cozy all season long."
+    "color": "beige",
+    "price": 15.95,
+    "description": "Crafted in super soft slub jersey, this striped henley makes the perfect layer."
   },
   {
     "name": "Striped Heather T-Shirt",
@@ -48,6 +39,15 @@
     "name": "Striped Heather T-Shirt",
     "img": "./images/Striped-Heather-T-Shirt.png",
     "size": 3,
+    "gender": "boys",
+    "color": "blue",
+    "price": 24.95,
+    "description": "This tee is so easy to throw on and go. It pairs well with jeans, cargos and joggers too! Plus the long sleeves will keep him cozy all season long."
+  },
+  {
+    "name": "Striped Heather T-Shirt",
+    "img": "./images/Striped-Heather-T-Shirt.png",
+    "size": 4,
     "gender": "boys",
     "color": "blue",
     "price": 24.95,
@@ -56,7 +56,7 @@
   {
     "name": "Cotton T-Shirt",
     "img": "./images/Cotton-Tee.jpeg",
-    "size": 1,
+    "size": 2,
     "gender": "girls",
     "color": "pink",
     "price": 19.95,
@@ -65,7 +65,7 @@
   {
     "name": "Cotton T-Shirt",
     "img": "./images/Cotton-Tee.jpeg",
-    "size": 2,
+    "size": 3,
     "gender": "girls",
     "color": "pink",
     "price": 19.95,
@@ -74,20 +74,11 @@
   {
     "name": "Cotton T-Shirt",
     "img": "/images/Cotton-Tee.jpeg",
-    "size": 3,
+    "size": 4,
     "gender": "girls",
     "color": "pink",
     "price": 19.95,
     "description": "Lightweight with short sleeves, this basic tee is perfect for layered looks or starting play outfits!"
-  },
-  {
-    "name": "Toddler Love Bug Graphic Tee",
-    "img": "./images/Love-Bug-Graphic-Tee.png",
-    "size": 1,
-    "gender": "girls",
-    "color": "pink",
-    "price": 34.95,
-    "description": "Crafted in soft cotton, this tee is perfect for your little love bug."
   },
   {
     "name": "Toddler Love Bug Graphic Tee",
@@ -102,6 +93,15 @@
     "name": "Toddler Love Bug Graphic Tee",
     "img": "./images/Love-Bug-Graphic-Tee.png",
     "size": 3,
+    "gender": "girls",
+    "color": "pink",
+    "price": 34.95,
+    "description": "Crafted in soft cotton, this tee is perfect for your little love bug."
+  },
+  {
+    "name": "Toddler Love Bug Graphic Tee",
+    "img": "./images/Love-Bug-Graphic-Tee.png",
+    "size": 4,
     "gender": "girls",
     "color": "pink",
     "price": 34.95,

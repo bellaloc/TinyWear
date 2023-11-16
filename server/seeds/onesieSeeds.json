@@ -11,6 +11,7 @@
     {
       "name": "2-Piece Outfit Set",
       "img": "./images/boys/sets/2-Piece-Outfit-Set.png",
+      "size": 3,
       "gender": "boys",
       "color": "orange",
       "price": 24.95,
