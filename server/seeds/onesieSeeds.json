@@ -3,7 +3,6 @@
       "name": "2-Piece Outfit Set",
       "img": "./images/boys/sets/2-Piece Outfit Set.png",
       "size": 2,
-
       "gender": "boys",
       "color": "orange",
       "price": 24.95,
@@ -13,7 +12,6 @@
     {
       "name": "2-Piece Outfit Set",
       "img": "./images/boys/sets/2-Piece Outfit Set.png",
-
       "gender": "boys",
       "color": "orange",
       "price": 24.95,
@@ -24,7 +22,6 @@
       "name": "2-Piece Outfit Set",
       "img": "./images/boys/sets/2-Piece Outfit Set.png",
       "size": 4,
-
       "gender": "boys",
       "color": "orange",
       "price": 24.95,
@@ -35,7 +32,6 @@
       "name": "Hoodie Sweat Set",
       "img": "./images/boys/sets/Hoodie Sweat Set.png",
       "size": 2, 
-
       "gender": "boys",
       "color": "blue",
       "price": 19.95, 
@@ -46,7 +42,6 @@
       "name": "Hoodie Sweat Set",
       "img": "./images/boys/sets/Hoodie Sweat Set.png",
       "size": 3, 
-
       "gender": "bpys",
       "color": "blue",
       "price": 19.95, 
@@ -57,7 +52,6 @@
       "name": "Hoodie Sweat Set",
       "img": "./images/boys/sets/Hoodie Sweat Set.png",
       "size": 4, 
-
       "gender": "boys",
       "color": "blue",
       "price": 19.95, 
@@ -68,7 +62,6 @@
       "name": "Sweater Outfit Set",
       "img": "./images/girls/sets/Baby Sweater Outfit Set.png",
       "size": 2, 
-
       "gender": "girls",
       "color": "grey",
       "price": 15.95,
@@ -79,7 +72,6 @@
       "name": "Sweater Outfit Set",
       "img": "./images/girls/sets/Baby Sweater Outfit Set.png",
       "size": 3, 
-
       "gender": "girls",
       "color": "grey",
       "price": 15.95,
@@ -90,7 +82,6 @@
       "name": "Sweater Outfit Set",
       "img": "./images/girls/sets/Baby Sweater Outfit Set.png",
       "size": 4, 
-
       "gender": "girls",
       "color": "grey",
       "price": 15.95,

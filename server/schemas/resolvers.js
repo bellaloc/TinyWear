@@ -16,7 +16,7 @@ const resolvers = {
      pants: async () => {
       return Pant.find();
      },
-     onsies: async () => {
+     onesies: async () => {
       return Onesie.find();
      },
      filteredShirts: async (parent, { _id, size, gender, color}) => {
