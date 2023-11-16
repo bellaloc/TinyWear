@@ -42,11 +42,10 @@
 
 
 const db = require('../config/connection');
-const { User, Shirt } = require('../models');
+const { User, Shirt, Pant } = require('../models');
 const userSeeds = require('./userData.json');
-const pantSeeds = require('./PantData.json');
+const pantSeeds = require('./PantSeeds.json');
 const cleanDB = require('./cleanDB');
-const userSeeds = require('./userData.json');
 const shirtSeeds = require('./shirtSeeds.json');
 
 db.once('open', async () => {
@@ -56,6 +55,7 @@ db.once('open', async () => {
     
     await User.create(userSeeds);
     await Shirt.create(shirtSeeds)
+    await Pant.create(pantSeeds)
 
   } catch (err) {
     console.error(err);

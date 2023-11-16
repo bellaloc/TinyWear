@@ -1,7 +1,7 @@
 [
   {
     "name": "Toddler long sleeve T-shirt",
-    "img": "",
+    "img": "./images/Toddler-Pocket-Henley-.webp",
     "size": 1,
     "gender": "boys",
     "color": "beige",
@@ -10,7 +10,7 @@
   },
   {
     "name": "Toddler long sleeve T-shirt",
-    "img": "",
+    "img": "./images/Toddler-Pocket-Henley-.webp",
     "size": 2,
     "gender": "boys",
     "color": "beige",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Toddler long sleeve T-shirt",
-    "img": "",
+    "img": "./images/Toddler-Pocket-Henley-.webp",
     "size": 3,
     "gender": "boys",
     "color": "beige",
@@ -28,7 +28,7 @@
   },
   {
     "name": "Toddler Striped Shirt",
-    "img": "",
+    "img": "./images/Toddler-Striped-Heather-T-Shirt.webp",
     "size": 1,
     "gender": "boys",
     "color": "blue",
@@ -37,7 +37,7 @@
   },
   {
     "name": "Toddler Striped Shirt",
-    "img": "",
+    "img": "./images/Toddler-Striped-Heather-T-Shirt.webp",
     "size": 2,
     "gender": "boys",
     "color": "blue",
@@ -46,7 +46,7 @@
   },
   {
     "name": "Toddler Striped Shirt",
-    "img": "",
+    "img": "./images/Toddler-Striped-Heather-T-Shirt.webp",
     "size": 3,
     "gender": "boys",
     "color": "blue",
@@ -55,7 +55,7 @@
   },
   {
     "name": "Toddler T-shirt",
-    "img": "",
+    "img": "./images/Toddler-Cotton-Tee.jpeg",
     "size": 1,
     "gender": "girls",
     "color": "pink",
@@ -64,7 +64,7 @@
   },
   {
     "name": "shirt1",
-    "img": "",
+    "img": "./images/Toddler-Cotton-Tee.jpeg",
     "size": 2,
     "gender": "girls",
     "color": "pink",
@@ -73,7 +73,7 @@
   },
   {
     "name": "shirt1",
-    "img": "",
+    "img": "./images/Toddler-Cotton-Tee.jpeg",
     "size": 3,
     "gender": "girls",
     "color": "pink",
@@ -82,7 +82,7 @@
   },
   {
     "name": "Toddler Love Bug Graphic Tee",
-    "img": "",
+    "img": "./images/Toddler-Love-Bug-Graphic-Tee.png",
     "size": 1,
     "gender": "girls",
     "color": "pink",
@@ -91,7 +91,7 @@
   },
   {
     "name": "Toddler Love Bug Graphic Tee",
-    "img": "",
+    "img": "./images/Toddler-Love-Bug-Graphic-Tee.png",
     "size": 2,
     "gender": "girls",
     "color": "pink",
@@ -100,7 +100,7 @@
   },
   {
     "name": "Toddler Love Bug Graphic Tee",
-    "img": "",
+    "img": "./images/Toddler-Love-Bug-Graphic-Tee.png",
     "size": 3,
     "gender": "girls",
     "color": "pink",
