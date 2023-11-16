@@ -5,7 +5,7 @@ import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
-const SignIn = (props) => {
+const SignIn = () => {
   const [formState, setFormState] = useState({ email: '', password: ''});
   const [login, {error, data}] = useMutation(LOGIN_USER);
 
@@ -109,6 +109,18 @@ const SignIn = (props) => {
                   Sign in
                 </button>
               </div>
+
+              {/* <button href='/signup'>
+                <a href='/signup'>Click here to Sign Up!</a>
+              </button> */}
+
+              <p className="mt-10 text-center text-sm text-gray-500">
+            Don't have an account?{' '}
+            <a href="/signup" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              Click here to Sign Up. 
+            </a>
+          </p>
+
             </form>
             )}
             {error && (
@@ -116,19 +128,8 @@ const SignIn = (props) => {
                 {error.message}
               </div>
             )}
-
-            <p className="mt-10 text-center text-sm text-gray-500">
-            Don't have an account?{' '}
-            <a href="/createaccount" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Click here to create an account. 
-            </a>
-          </p>
-          
           </div>
         </div>
-        
-  
- 
       </>
     )
   }
