@@ -1,7 +1,7 @@
 [
   {
     "name": "Pocket Henldey Long Sleeve Shirt",
-    "img": "../assets/images/productImages/boys/shirts/Pocket-Henley.png",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168506/Pocket-Henley_owrbel.png",
     "size": 2,
     "gender": "boys",
     "color": "beige",
@@ -10,7 +10,7 @@
   },
   {
     "name": "Pocket Henldey Long Sleeve Shirt",
-    "img": "./images/Pocket-Henley.png",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168506/Pocket-Henley_owrbel.png",
     "size": 3,
     "gender": "boys",
     "color": "beige",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Pocket Henldey Long Sleeve Shirt",
-    "img": "./images/Pocket-Henley.png",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168506/Pocket-Henley_owrbel.png",
     "size": 4,
     "gender": "boys",
     "color": "beige",
@@ -28,7 +28,7 @@
   },
   {
     "name": "Striped Heather T-Shirt",
-    "img": "./images/Striped-Heather-T-Shirt.png",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168509/Striped-Heather-T-Shirt_zi48g3.png",
     "size": 2,
     "gender": "boys",
     "color": "blue",
@@ -37,7 +37,7 @@
   },
   {
     "name": "Striped Heather T-Shirt",
-    "img": "./images/Striped-Heather-T-Shirt.png",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168509/Striped-Heather-T-Shirt_zi48g3.png",
     "size": 3,
     "gender": "boys",
     "color": "blue",
@@ -46,7 +46,7 @@
   },
   {
     "name": "Striped Heather T-Shirt",
-    "img": "./images/Striped-Heather-T-Shirt.png",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168509/Striped-Heather-T-Shirt_zi48g3.png",
     "size": 4,
     "gender": "boys",
     "color": "blue",
@@ -55,7 +55,7 @@
   },
   {
     "name": "Cotton T-Shirt",
-    "img": "./images/Cotton-Tee.jpeg",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168630/Cotton-Tee_neb0pf.jpg",
     "size": 2,
     "gender": "girls",
     "color": "pink",
@@ -64,7 +64,7 @@
   },
   {
     "name": "Cotton T-Shirt",
-    "img": "./images/Cotton-Tee.jpeg",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168630/Cotton-Tee_neb0pf.jpg",
     "size": 3,
     "gender": "girls",
     "color": "pink",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Cotton T-Shirt",
-    "img": "/images/Cotton-Tee.jpeg",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168630/Cotton-Tee_neb0pf.jpg",
     "size": 4,
     "gender": "girls",
     "color": "pink",
@@ -81,8 +81,8 @@
     "description": "Lightweight with short sleeves, this basic tee is perfect for layered looks or starting play outfits!"
   },
   {
-    "name": "Toddler Love Bug Graphic Tee",
-    "img": "./images/Love-Bug-Graphic-Tee.png",
+    "name": "Love Bug Graphic Tee",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168631/Love-Bug-Graphic-Tee_psibyz.png",
     "size": 2,
     "gender": "girls",
     "color": "pink",
@@ -90,8 +90,8 @@
     "description": "Crafted in soft cotton, this tee is perfect for your little love bug."
   },
   {
-    "name": "Toddler Love Bug Graphic Tee",
-    "img": "./images/Love-Bug-Graphic-Tee.png",
+    "name": "Love Bug Graphic Tee",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168631/Love-Bug-Graphic-Tee_psibyz.png",
     "size": 3,
     "gender": "girls",
     "color": "pink",
@@ -99,8 +99,8 @@
     "description": "Crafted in soft cotton, this tee is perfect for your little love bug."
   },
   {
-    "name": "Toddler Love Bug Graphic Tee",
-    "img": "./images/Love-Bug-Graphic-Tee.png",
+    "name": "Love Bug Graphic Tee",
+    "img": "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168631/Love-Bug-Graphic-Tee_psibyz.png",
     "size": 4,
     "gender": "girls",
     "color": "pink",
