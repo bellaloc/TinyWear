@@ -24,7 +24,7 @@ const pantSchema = new Schema({
     type: Number,
     required: true,
   },
-  image: {
+  img: {
     type: String,
     required: true,
   },

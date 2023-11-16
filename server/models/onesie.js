@@ -23,7 +23,7 @@ const onesieSchema = new Schema({
     type: Number,
  
   },
-  image: {
+  img: {
     type: String,
  
   },
