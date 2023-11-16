@@ -1,5 +1,5 @@
 // schemas/resolvers.js
-const { Clothing, User, Shirt } = require('../models');
+const { User, Shirt, Onesie, Pant } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
@@ -12,6 +12,12 @@ const resolvers = {
     },
     shirts: async () => {
       return Shirt.find();
+     },
+     pants: async () => {
+      return Pant.find();
+     },
+     onsies: async () => {
+      return Onesie.find();
      },
      filteredShirts: async (parent, { _id, size, gender, color}) => {
        try {
@@ -27,22 +33,34 @@ const resolvers = {
         console.error( error);
        }
       },
-   
-     
-    clothing: async (_, { category, age, gender }) => {
-      try {
-        const filter = {};
-        if (category) filter.category = category;
-        if (age) filter.age = age;
-        if (gender) filter.gender = gender;
-
-        const clothing = await Clothing.find(filter);
-        return clothing;
-      } catch (error) {
-        console.error('Error retrieving clothing data:', error);
-        throw new Error('Internal Server Error');
-      }
-    },
+      filteredPants: async (parent, { _id, size, gender, color}) => {
+        try {
+         const filter = {};
+         if (_id) filter._id = _id;
+         if (size) filter.size = size;
+         if (gender) filter.gender = gender;
+         if (color) filter.color = color;
+ 
+         const pantsDisplayed = await Pant.find(filter);
+         return pantsDisplayed
+        } catch ( error ) {
+         console.error( error);
+        }
+       },
+       filteredOnesies: async (parent, { _id, size, gender, color}) => {
+        try {
+         const filter = {};
+         if (_id) filter._id = _id;
+         if (size) filter.size = size;
+         if (gender) filter.gender = gender;
+         if (color) filter.color = color;
+ 
+         const onesiesDisplayed = await Onesie.find(filter);
+         return onesiesDisplayed
+        } catch ( error ) {
+         console.error( error);
+        }
+       },
   },
   Mutation: {
     addUser: async (parent, { email, password }) => {
@@ -64,17 +82,7 @@ const resolvers = {
     }
     const token = signToken(user);  
     return { token, user}; 
-  },
-    addClothing: async (_, { input }) => {
-      try {
-        const clothing = await Clothing.create(input);
-        return clothing;
-      } catch (error) {
-        console.error('Error adding clothing:', error);
-        throw new Error('Internal Server Error');
-      }
-    },
-    
+  }, 
   },
   
 }
