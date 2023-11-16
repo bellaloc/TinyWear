@@ -1,13 +1,29 @@
-// models/Shirt.js
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 
-const shirtSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  age: { type: Number, required: true },
-  gender: { type: String, enum: ['Boy', 'Girl'], required: true },
-  price: { type: Number, required: true },
+const shirtSchema = new Schema({
+  name: {
+    type: String,
+  },
+  img: {
+    type: String,
+  },
+  size: {
+    type: Number,
+  },
+  gender: {
+    type: String
+  },
+  color: {
+    type: String
+  },
+  price: {
+    type: Number
+  },
+  itemDescription: {
+    type: String
+  },
 });
 
-const Shirt = mongoose.model('Shirt', shirtSchema);
+const Shirt = model('Shirt', shirtSchema);
 
 module.exports = Shirt;

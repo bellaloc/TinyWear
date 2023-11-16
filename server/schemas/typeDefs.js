@@ -10,6 +10,22 @@ type Auth {
   user: User
 }
 
+type Shirt {
+  _id: ID
+  name: String
+  img: String
+  size: Int
+  gender: String
+  color: String
+  price: Int
+  itemDescription: String
+}
+
+
+
+
+
+
   type Clothing {
     _id: ID!
     category: String!
@@ -30,6 +46,8 @@ type Auth {
   type Query {
     users: [User]
     user(email: String!): User
+    shirts: [Shirt]
+    filteredShirts(_id: ID, size: Int, color: String, gender: String ): Shirt
     clothing(category: String, age: Int, gender: String): [Clothing]
   }
 

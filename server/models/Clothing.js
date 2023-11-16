@@ -1,34 +1,24 @@
-// models/Clothing.js
-const mongoose = require('mongoose');
+const { Schema, model } = require('mongoose');
 
-const clothingSchema = new mongoose.Schema({
-  category: {
+const matchupSchema = new Schema({
+  tech1: {
     type: String,
-    enum: ['shirt', 'pants', 'sets'],
     required: true,
-    index: true,
   },
-  age: {
+  tech2: {
+    type: String,
+    required: true,
+  },
+  tech1_votes: {
     type: Number,
-    required: true,
-    index: true,
+    default: 0,
   },
-  gender: {
-    type: String,
-    enum: ['boy', 'girl'],
-    required: true,
-    index: true,
-  },
-  name: {
-    type: String,
-    required: true,
-  },
-  price: {
+  tech2_votes: {
     type: Number,
-    required: true,
+    default: 0,
   },
 });
 
-const Clothing = mongoose.model('Clothing', clothingSchema);
+const Matchup = model('Matchup', matchupSchema);
 
-module.exports = Clothing;
+module.exports = Matchup;
