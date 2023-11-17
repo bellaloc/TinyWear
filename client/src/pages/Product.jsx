@@ -1,4 +1,4 @@
-import '../../public/styles'
+
 const Product = () => {
 
  return (
