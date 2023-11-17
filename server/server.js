@@ -1,13 +1,8 @@
 const express = require('express');
-const { ApolloServer } = require('@apollo/server'); // Updated import
-const { expressMiddleware } = require('@apollo/server/express4'); // Updated import
-const path = require('path');
-
+const { ApolloServer } = require('@apollo/server');
+const { expressMiddleware } = require('@apollo/server/express4'); 
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
-const Clothing = require('./models/Clothing');
-const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
-
 const PORT = process.env.PORT || 3001;
 const app = express();
 const server = new ApolloServer({
@@ -20,18 +15,6 @@ const startApolloServer = async () => {
 
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
-
-  // Your API routes
-  app.get('/clothing', async (req, res) => {
-    try {
-      const clothing = await Clothing.find();
-      res.json(clothing);
-    } catch (error) {
-      console.error('Error retrieving clothing data:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
-  });
-
   app.use('/graphql', expressMiddleware(server));
 
   const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY)
