@@ -6,7 +6,8 @@
       "gender": "boys",
       "color": "beige",
       "price": 24.95,
-      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one."
+      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
+      "payBtn": "https://buy.stripe.com/dR68A1aeR6tngla146"
     },
     {
       "name": "Everyday Pull-On Pants",
@@ -15,7 +16,8 @@
       "gender": "boys",
       "color": "beige",
       "price": 24.95,
-      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one."
+      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
+      "payBtn": "https://buy.stripe.com/dR68A1aeR6tngla146"
     },
     {
       "name": "Everyday Pull-On Pants",
@@ -24,7 +26,8 @@
       "gender": "boys",
       "color": "beige",
       "price": 24.95,
-      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one."
+      "description": "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
+      "payBtn": "https://buy.stripe.com/dR68A1aeR6tngla146"
     },
     {
       "name": "Relaxed Fit Pull-On Joggers",
@@ -33,7 +36,8 @@
       "gender": "boys",
       "color": "grey",
       "price": 19.95, 
-      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time."
+      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time.",
+      "payBtn": "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
     },
     {
       "name": "Relaxed Fit Pull-On Joggers",
@@ -42,7 +46,8 @@
       "gender": "boys",
       "color": "grey",
       "price": 19.95, 
-      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time."
+      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time.",
+      "payBtn": "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
     },
     {
       "name": "Relaxed Fit Pull-On Joggers",
@@ -51,7 +56,8 @@
       "gender": "boys",
       "color": "grey",
       "price": 19.95, 
-      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time."
+      "description": "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time.",
+      "payBtn": "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
     },
     {
       "name": "Heart Leggings",
@@ -60,7 +66,8 @@
       "gender": "girls",
       "color": "multi",
       "price": 15.95,
-      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl."
+      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       "name": "Heart Leggings",
@@ -69,7 +76,8 @@
       "gender": "girls",
       "color": "multi",
       "price": 15.95,
-      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl."
+      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       "name": "Heart Leggings",
@@ -78,7 +86,8 @@
       "gender": "girls",
       "color": "multi",
       "price": 15.95,
-      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl."
+      "description": "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       "name": "Pull-On Flare Pants",
@@ -87,7 +96,8 @@
       "gender": "girls",
       "color": "pink",
       "price": 15.95,
-      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie."
+      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       "name": "Pull-On Flare Pants",
@@ -96,7 +106,8 @@
       "gender": "girls",
       "color": "pink",
       "price": 15.95,
-      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie."
+      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       "name": "Pull-On Flare Pants",
@@ -105,7 +116,8 @@
       "gender": "girls",
       "color": "pink",
       "price": 15.95,
-      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie."
+      "description": "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie.",
+      "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     }
   ]
   

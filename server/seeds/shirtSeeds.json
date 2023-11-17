@@ -6,7 +6,8 @@
     "gender": "boys",
     "color": "beige",
     "price": 15.95,
-    "description": "Crafted in super soft slub jersey, this striped henley makes the perfect layer."
+    "description": "Crafted in super soft slub jersey, this striped henley makes the perfect layer.",
+    "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
   },
   {
     "name": "Pocket Henldey Long Sleeve Shirt",
@@ -15,7 +16,8 @@
     "gender": "boys",
     "color": "beige",
     "price": 15.95,
-    "description": "Crafted in super soft slub jersey, this striped henley makes the perfect layer."
+    "description": "Crafted in super soft slub jersey, this striped henley makes the perfect layer.",
+    "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
   },
   {
     "name": "Pocket Henldey Long Sleeve Shirt",
@@ -24,7 +26,8 @@
     "gender": "boys",
     "color": "beige",
     "price": 15.95,
-    "description": "Crafted in super soft slub jersey, this striped henley makes the perfect layer."
+    "description": "Crafted in super soft slub jersey, this striped henley makes the perfect layer.",
+    "payBtn": "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
   },
   {
     "name": "Striped Heather T-Shirt",
@@ -33,7 +36,8 @@
     "gender": "boys",
     "color": "blue",
     "price": 24.95,
-    "description": "This tee is so easy to throw on and go. It pairs well with jeans, cargos and joggers too! Plus the long sleeves will keep him cozy all season long."
+    "description": "This tee is so easy to throw on and go. It pairs well with jeans, cargos and joggers too! Plus the long sleeves will keep him cozy all season long.",
+    "payBtn": "https://buy.stripe.com/7sI17z72FdVP5Gw7sz"
   },
   {
     "name": "Striped Heather T-Shirt",
@@ -42,7 +46,8 @@
     "gender": "boys",
     "color": "blue",
     "price": 24.95,
-    "description": "This tee is so easy to throw on and go. It pairs well with jeans, cargos and joggers too! Plus the long sleeves will keep him cozy all season long."
+    "description": "This tee is so easy to throw on and go. It pairs well with jeans, cargos and joggers too! Plus the long sleeves will keep him cozy all season long.",
+    "payBtn": "https://buy.stripe.com/7sI17z72FdVP5Gw7sz"
   },
   {
     "name": "Striped Heather T-Shirt",
@@ -51,7 +56,8 @@
     "gender": "boys",
     "color": "blue",
     "price": 24.95,
-    "description": "This tee is so easy to throw on and go. It pairs well with jeans, cargos and joggers too! Plus the long sleeves will keep him cozy all season long."
+    "description": "This tee is so easy to throw on and go. It pairs well with jeans, cargos and joggers too! Plus the long sleeves will keep him cozy all season long.",
+    "payBtn": "https://buy.stripe.com/7sI17z72FdVP5Gw7sz"
   },
   {
     "name": "Cotton T-Shirt",
@@ -60,7 +66,8 @@
     "gender": "girls",
     "color": "pink",
     "price": 19.95,
-    "description": "Lightweight with short sleeves, this basic tee is perfect for layered looks or starting play outfits!"
+    "description": "Lightweight with short sleeves, this basic tee is perfect for layered looks or starting play outfits!",
+    "payBtn": "https://buy.stripe.com/aEU8A15YB3hbglaaEJ"
   },
   {
     "name": "Cotton T-Shirt",
@@ -69,7 +76,8 @@
     "gender": "girls",
     "color": "pink",
     "price": 19.95,
-    "description": "Lightweight with short sleeves, this basic tee is perfect for layered looks or starting play outfits!"
+    "description": "Lightweight with short sleeves, this basic tee is perfect for layered looks or starting play outfits!",
+    "payBtn": "https://buy.stripe.com/aEU8A15YB3hbglaaEJ"
   },
   {
     "name": "Cotton T-Shirt",
@@ -78,7 +86,8 @@
     "gender": "girls",
     "color": "pink",
     "price": 19.95,
-    "description": "Lightweight with short sleeves, this basic tee is perfect for layered looks or starting play outfits!"
+    "description": "Lightweight with short sleeves, this basic tee is perfect for layered looks or starting play outfits!",
+    "payBtn": "https://buy.stripe.com/aEU8A15YB3hbglaaEJ"
   },
   {
     "name": "Love Bug Graphic Tee",
@@ -87,7 +96,8 @@
     "gender": "girls",
     "color": "pink",
     "price": 34.95,
-    "description": "Crafted in soft cotton, this tee is perfect for your little love bug."
+    "description": "Crafted in soft cotton, this tee is perfect for your little love bug.",
+    "payBtn": "https://buy.stripe.com/8wM9E5aeR7xr8SIdQU"
   },
   {
     "name": "Love Bug Graphic Tee",
@@ -96,7 +106,8 @@
     "gender": "girls",
     "color": "pink",
     "price": 34.95,
-    "description": "Crafted in soft cotton, this tee is perfect for your little love bug."
+    "description": "Crafted in soft cotton, this tee is perfect for your little love bug.",
+    "payBtn": "https://buy.stripe.com/8wM9E5aeR7xr8SIdQU"
   },
   {
     "name": "Love Bug Graphic Tee",
@@ -105,6 +116,7 @@
     "gender": "girls",
     "color": "pink",
     "price": 34.95,
-    "description": "Crafted in soft cotton, this tee is perfect for your little love bug."
+    "description": "Crafted in soft cotton, this tee is perfect for your little love bug.",
+    "payBtn": "https://buy.stripe.com/8wM9E5aeR7xr8SIdQU"
   }
 ]
