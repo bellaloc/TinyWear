@@ -1,12 +1,10 @@
-// src/App.jsx
-
 import React from 'react';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ShoppingCart from './components/ShoppingCart';
-import CheckoutButton from './components/CheckoutButton';
+import CheckoutButton from './components/CheckoutBtn';
 
 const client = new ApolloClient({
   uri: '/graphql',
