@@ -1,35 +1,47 @@
-// lazy query = a query that doesnt get ran right away
-import axios from 'axios'
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useSelector } from 'react-redux';
+import { url } from '../../../server/Stripe/index';
 
-import { useSelector }  from 'react-redux'
-import{ url } from '../../../server/Stripe/index'
+const CheckoutButton = ({ cartItems }) => {
+  const user = useSelector((state) => state.auth);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
+  const handleCheckout = () => {
+    setLoading(true);
+    axios
+      .post(`${url}/stripe/create-checkout-session`, {
+        cartItems,
+        userId: user.id,
+      })
+      .then((res) => {
+        if (res.data.url) {
+          window.location.href = res.data.url;
+        }
+      })
+      .catch((err) => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
+  return (
+    <>
+      <button
+        onClick={() => handleCheckout()}
+        className={`bg-blue-500 text-white px-4 py-2 rounded ${
+          loading ? 'opacity-50 cursor-not-allowed' : ''
+        }`}
+        disabled={loading}
+      >
+        {loading ? 'Processing...' : 'Checkout'}
+      </button>
+      {error && <p className="text-red-500">{error}</p>}
+    </>
+  );
+};
 
-const checkoutButton = ({ cartItems }) =>  { 
-
-     const user = useSelector((state) => state.auth)
-
-console.log(cartItems)
-    const handleCheckout = () => {
-       axios.post(`${url}/stripe/create-checkout-session`, {
-       cartItems,
-       userId: user.id
-}).then((res) => {
-    if(res.data.url){
-        window.location.href = res.data.url
-    }
-}).catch((err) => console.log(err.message))
-    }
-    return (
-        <>
-            <button onClick={() => handleCheckout()}> Checkout! </button>
-        </>
-    );
-}
-
-export default checkoutButton
-
-
-// Add buttons to products
-//<checkoutButton cartItems = {cart.cartItems} />
+export default CheckoutButton;
