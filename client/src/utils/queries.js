@@ -90,16 +90,4 @@ export const GET_CLOTHING_ITEMS = gql`
   }
 `;
 
-export const GET_FILTERED_CLOTHING_ITEMS = gql`
-  query GetFilteredClothingItems($category: String!, $age: Int!, $gender: String!) {
-    filteredClothingItems(category: $category, age: $age, gender: $gender) {
-      id
-      name
-      category
-      age
-      gender
-      price
 
-    }
-  }
-`;

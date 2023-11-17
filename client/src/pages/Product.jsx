@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+const Product = () => {
+=======
+>>>>>>> main
 
 // import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
