@@ -1,8 +1,8 @@
-import '../../public/styles/card-style.css'
-
+import '../../public/styles'
 const Product = () => {
 
  return (
+
 <main class="container">
  
 
