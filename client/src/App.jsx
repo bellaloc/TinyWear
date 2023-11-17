@@ -1,27 +1,32 @@
-import './App.css';
-import { Outlet } from 'react-router-dom';
+import React from 'react';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import ShoppingCart from './components/ShoppingCart';
+import CheckoutButton from './components/CheckoutBtn';
 
 const client = new ApolloClient({
   uri: '/graphql',
   cache: new InMemoryCache(),
 });
 
-function App() {
+const App = () => {
   return (
     <ApolloProvider client={client}>
-      <div className="">
-      <Navbar />
-      <div>
-      <Outlet />
-      </div>
-      <Footer />
-      </div>
+      <Router>
+        <div className="">
+          <Navbar />
+          <Routes>
+            <Route path="/shoppingcart" element={<ShoppingCart />} />
+            <Route path="/checkoutbutton" element={<CheckoutButton />} />
+            {/* Add more routes as needed */}
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
     </ApolloProvider>
   );
-}
+};
 
 export default App;

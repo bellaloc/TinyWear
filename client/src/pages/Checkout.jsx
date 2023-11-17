@@ -1,11 +1,6 @@
-// Shopping Carts
-// https://tailwindui.com/components/ecommerce/components/shopping-carts
-
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
-
-
+import { Fragment, useState } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import { XMarkIcon } from '@heroicons/react/24/outline';
 
 const products = [
   {
@@ -30,14 +25,14 @@ const products = [
       'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
   },
   // More products...
-]
+];
 
 export default function Example() {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(true);
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={setOpen}>
+      <Dialog as="div" className="relative z-10" onClose={() => setOpen(false)}>
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-500"
@@ -139,7 +134,7 @@ export default function Example() {
                       </div>
                       <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                         <p>
-                              or
+                          or{' '}
                           <button
                             type="button"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
@@ -159,5 +154,5 @@ export default function Example() {
         </div>
       </Dialog>
     </Transition.Root>
-  )
+  );
 }

@@ -1,22 +1,23 @@
-// https://tailwindui.com/components/application-ui/navigation/navbars
-import logo from '../assets/images/logo/logo.png';
+// Navbar.jsx
 
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Fragment, useState } from 'react';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import logo from '../assets/images/logo/logo.png';
 
 const navigation = [
   { name: 'Log Out', href: '#', current: false },
-  // { name: 'Team', href: '#', current: false },
-  // { name: 'Projects', href: '#', current: false },
-  // { name: 'Calendar', href: '#', current: false },
-]
+  // Other navigation items...
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Navbar() {
+  const [loggedIn, setLoggedIn] = useState(false);
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -24,7 +25,6 @@ export default function Navbar() {
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
             <div className="relative flex h-24 items-center justify-evenly">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
@@ -35,57 +35,42 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              {/* <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"> */}
-                {/* logo image */}
-                {/* <div className="flex flex-shrink-0 items-center object-contain">
-                  <img
-                    className="h-11 w-auto"
-                    src={logo}
-                    alt="Your Company"
-                  />
-                </div> */}
-                <div className="hidden sm:ml-6 sm:block">
-                  {/* logout button */}
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}>
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
+
+              <div className="hidden sm:ml-6 sm:block">
+                <div className="flex space-x-4">
+                  <Link
+                    to={loggedIn ? '#' : '/login'}
+                    className={classNames(
+                      'rounded-md px-3 py-2 text-sm font-medium',
+                      item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    )}
+                    aria-current={item.current ? 'page' : undefined}
+                  >
+                    {loggedIn ? 'Sign Out' : 'Sign In'}
+                  </Link>
                 </div>
-              {/* </div> */}
-
-          {/* logo image */}
-              <div className="">
-              <img 
-                    className="h-40 w-full"
-                    src={logo}
-                    alt="Your Company"
-                   
-                  />
-            </div>
-
-            {/* cart icon */}
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                  type="button"
-                  className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                  </svg>
-                  <a href="/checkout">
-                  </a>
-                </button>
               </div>
-              
+
+              <div className="">
+                <img 
+                  className="h-40 w-full"
+                  src={logo}
+                  alt="Your Company"
+                />
+              </div>
+
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <Link to="/shoppingcart"> {/* Change the link to your shopping cart page */}
+                  <button
+                    type="button"
+                    className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                      {/* Cart icon SVG */}
+                    </svg>
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
 
@@ -110,5 +95,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
