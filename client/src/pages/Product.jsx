@@ -1,19 +1,25 @@
-<<<<<<< HEAD
 
-const Product = () => {
-=======
->>>>>>> main
-
-// import { useState } from 'react'
+import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
 
 import { useQuery } from '@apollo/client';
+import { useParams } from 'react-router-dom';
 import { QUERY_SHIRTS } from '../utils/queries.js'
 
-const SingleProduct = () => {
 
-const { loading, data } = useQuery(QUERY_SHIRTS )
+
+const SingleProduct = () => {
+  const { shirtId } = useParams();
+
+const { loading, data } = useQuery(QUERY_SHIRTS, 
+  {
+  // pass URL parameter
+  variables: { shirtId: shirtId },
+}
+);
+
+
 const shirts = data?.shirts || [];
 
 // for reviews
@@ -22,55 +28,23 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-// for sizes
-// const sizes = [
-//   { name: 'T2', inStock: true },
-//   { name: 'T3', inStock: true },
-//   { name: 'T4', inStock: true }
-// ]
+// for colors and sizes
+const product = {
+  colors: [
+    { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
+    { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
+    { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
+  ],
+  sizes: [
+    { name: 'T2', inStock: true },
+    { name: 'T3', inStock: true },
+    { name: 'T4', inStock: true },
+  ],
+}
 
+// const [selectedColor, setSelectedColor] = useState(product.colors[0])
+const [selectedSize, setSelectedSize] = useState(product.sizes[2])
 
-
-
-
-
-
-    // const product = {
-  // name: 'Basic Tee 6-Pack',
-  // price: '$192',
-  // href: '#',
-  // breadcrumbs: [
-  //   { id: 1, name: 'Men', href: '#' },
-  //   { id: 2, name: 'Clothing', href: '#' },
-  // ],
-  
-  // colors: [
-  //   { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
-  //   { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
-  //   { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
-  // ],
-  // sizes: [
-  //   { name: 'T2', inStock: true },
-  //   { name: 'T3', inStock: true },
-  //   { name: 'T4', inStock: true },
-
-  // ],
-  // description:
-  //   'The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: "Black". Need to add an extra pop of color to your outfit? Our white tee has you covered.',
-  // highlights: [
-  //   'Hand cut and sewn locally',
-  //   'Dyed with our proprietary colors',
-  //   'Pre-washed & pre-shrunk',
-  //   'Ultra-soft 100% cotton',
-  // ],
-  // details:
-  //   'The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming "Charcoal Gray" limited release.',
-// }
-
-
-// export default function Example() {
-//   const [selectedColor, setSelectedColor] = useState(product.colors[0])
-//   const [selectedSize, setSelectedSize] = useState(product.sizes[2])
 
   return (
     <>
@@ -78,26 +52,38 @@ function classNames(...classes) {
     <div> loading... </div>
     ) : (
     <div className="bg-white">
+    
       {shirts.map(shirt => (
         <div className="pt-6">
-        {/* Image */}
-        <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
-          <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
+        {/* Product Image */}
+        <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+          <div className="aspect-h-4 aspect-w-3 overflow-hidden rounded-lg lg:block">
             <img
               src={shirt.img}
               className="h-full w-full object-cover object-center"
             /> 
           </div>
-        </div>
-        {/* Product info */}
-        <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
+          <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
+        {/* Product Name */}
+        <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
             <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{shirt.name}</h1>
           </div>
-          {/* Options */}
+          {/* Product Description */}
+          <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
+            <div>
+              <h3 className="sr-only">Description</h3>
+              <div className="space-y-6">
+                <p className="text-base text-gray-900">{shirt.description}</p>
+              </div>
+            </div>
+            
+          {/* Price */}
+          {/* grey line */}
+          <hr class="h-px my-8 bg-gray-200 border-1 dark:bg-gray"></hr>
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
-            <p className="text-3xl tracking-tight text-gray-900">${shirt.price}</p>
+            <p className=" mt-6 text-3xl tracking-tight text-gray-900">${shirt.price}</p>
             {/* Reviews */}
             <div className="mt-6">
               <h3 className="sr-only">Reviews</h3>
@@ -115,7 +101,7 @@ function classNames(...classes) {
                   ))}
                 </div>
                 <p className="sr-only">{reviews.average} out of 5 stars</p>
-                <a href={reviews.href} className="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500">
+                <a className="ml-3 text-sm font-medium text-cyan-700">
                   {reviews.totalCount} reviews
                 </a>
               </div>
@@ -125,7 +111,6 @@ function classNames(...classes) {
               {/* Colors */}
               {/* <div>
                 <h3 className="text-sm font-medium text-gray-900">Color</h3>
-
                 <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-4">
                   <RadioGroup.Label className="sr-only">Choose a color</RadioGroup.Label>
                   <div className="flex items-center space-x-3">
@@ -159,18 +144,18 @@ function classNames(...classes) {
               </div> */}
 
               {/* Sizes */}
-              {/* <div className="mt-10">
+              <div className="mt-10">
                 <div className="flex items-center justify-between">
                   <h3 className="text-sm font-medium text-gray-900">Size</h3>
-                  <a href="#" className="text-sm font-medium text-indigo-600 hover:text-indigo-500">
-                    Size guide
+                  <a href="https://res.cloudinary.com/deqzppd4t/image/upload/v1700352654/Screenshot_2023-11-18_at_4.10.56_PM_ireplp.png" target="_blank" className="text-sm font-medium text-cyan-700 hover:text-cyan-600">
+                    Size Guide
                   </a>
                 </div>
 
                 <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-4">
                   <RadioGroup.Label className="sr-only">Choose a size</RadioGroup.Label>
                   <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
-                    {sizes.map((size) => (
+                    {product.sizes.map((size) => (
                       <RadioGroup.Option
                         key={size.name}
                         value={size}
@@ -218,50 +203,27 @@ function classNames(...classes) {
                     ))}
                   </div>
                 </RadioGroup>
-              </div> */}
+              </div>
 
               <button
                 type="submit"
-                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
               >
-                Add to bag
+                Add To Cart
               </button>
             </form>
           </div>
 
-          <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
-            {/* Description and details */}
-            <div>
-              <h3 className="sr-only">Description</h3>
-
-              <div className="space-y-6">
-                <p className="text-base text-gray-900">{shirt.description}</p>
-              </div>
-            </div>
-
-            {/* <div className="mt-10">
-              <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
-
-              <div className="mt-4">
-                <ul role="list" className="list-disc space-y-2 pl-4 text-sm">
-                  {product.highlights.map((highlight) => (
-                    <li key={highlight} className="text-gray-400">
-                      <span className="text-gray-600">{highlight}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div> */}
-
-            {/* <div className="mt-10">
-              <h2 className="text-sm font-medium text-gray-900">Details</h2>
-
-              <div className="mt-4 space-y-6">
-                <p className="text-sm text-gray-600">{product.details}</p>
-              </div>
-            </div> */}
           </div>
+          
+
+          
         </div>
+
+          </div>
+
+        </div>
+
         
 
         

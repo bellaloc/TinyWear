@@ -13,17 +13,17 @@ const Footer = ({ theme = "dark" }) => {
     <>
       <div
         className={`w-screen px-4 pt-8 md:pt-28 text-xs sm:text-sm
-      ${theme === "dark" ? "bg-gray-900 text-gray-400" : "bg-gray-100 text-gray-600"}
+      ${theme === "dark" ? "bg-gray-800 text-gray-400" : "bg-gray-100 text-gray-600"}
       `}
       >
-        <div className="flex flex-col md:flex-row gap-8 sm:gap-20 ml-6 mr-12">
+        <div className="flex-col md:flex-row gap-8 sm:gap-20 ml-6 mr-12 flex justify-center">
           <div className="self-center">
             <div className="mb-2 md:mb-6">
             Tiny Threads, Big Dreams: Where Fashion Meets Fun for Your Little Ones!
             </div>
           </div>
 
-          <div className="mx-auto flex flex-row gap-6 md:gap-12 flex-wrap sm:flex-nowrap">
+          {/* <div className="mx-auto flex flex-row gap-6 md:gap-12 flex-wrap sm:flex-nowrap">
             {data.map(({ title, list }, idx) => (
               <div key={idx}>
                 <h5
@@ -39,7 +39,7 @@ const Footer = ({ theme = "dark" }) => {
                 </ul>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div

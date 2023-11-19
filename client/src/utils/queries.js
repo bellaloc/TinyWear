@@ -91,3 +91,17 @@ export const GET_CLOTHING_ITEMS = gql`
 `;
 
 
+// export const QUERY_SINGLE_PRODUCT = gql`
+//   query getSingleProduct(productId: ID!) {
+//     product(productId: $productId) {
+//       _id
+//       name
+//       img
+//       size
+//       gender
+//       color
+//       price
+//       description
+//     }
+//   }
+// `;
