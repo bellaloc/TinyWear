@@ -105,9 +105,9 @@ const Signup = () => {
                   Sign Up
                 </button>
               </div>
-              {/* <button href='/signin'>
+              { <button href='/signin'>
                 <a href='/signin'>Already have an account click to Login!</a>
-              </button> */}
+              </button> }
               <p className="mt-10 text-center text-sm text-gray-500">
             Already have an account?{' '}
             <a href="/signin" className="font-semibold leading-6 text-cyan-900 hover:text-cyan-700">
