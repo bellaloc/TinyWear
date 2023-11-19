@@ -1,10 +1,6 @@
-// Shopping Carts
-// https://tailwindui.com/components/ecommerce/components/shopping-carts
-
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-
 
 
 const products = [
@@ -36,6 +32,7 @@ export default function Example() {
   const [open, setOpen] = useState(true)
 
   return (
+    <div className="flex min-h-full flex-1 lg:px-8 py-80 mb-44">
     <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={setOpen}>
         <Transition.Child
@@ -68,6 +65,7 @@ export default function Example() {
                       <div className="flex items-start justify-between">
                         <Dialog.Title className="text-lg font-medium text-gray-900">Shopping cart</Dialog.Title>
                         <div className="ml-3 flex h-7 items-center">
+                        <a href="/">
                           <button
                             type="button"
                             className="relative -m-2 p-2 text-gray-400 hover:text-gray-500"
@@ -77,7 +75,9 @@ export default function Example() {
                             <span className="sr-only">Close panel</span>
                             <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                           </button>
+                          </a>
                         </div>
+
                       </div>
 
                       <div className="mt-8">
@@ -132,22 +132,26 @@ export default function Example() {
                       <div className="mt-6">
                         <a
                           href="https://buy.stripe.com/test_6oE17Fa3d0Pm0dqaEE"
-                          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                          className="flex items-center justify-center rounded-md border border-transparent bg-cyan-900 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-700"
                         >
                           Checkout
                         </a>
                       </div>
                       <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                         <p>
-                              or
+                             
+                              <a href="/">
+
+                             
                           <button
                             type="button"
-                            className="font-medium text-indigo-600 hover:text-indigo-500"
+                            className="font-medium text-cyan-900 hover:text-cyan-700"
                             onClick={() => setOpen(false)}
                           >
-                            Continue Shopping
+                             Continue Shopping
                             <span aria-hidden="true"> &rarr;</span>
                           </button>
+                          </a>
                         </p>
                       </div>
                     </div>
@@ -159,5 +163,6 @@ export default function Example() {
         </div>
       </Dialog>
     </Transition.Root>
+    </div>
   )
 }
