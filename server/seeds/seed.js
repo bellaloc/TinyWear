@@ -21,7 +21,7 @@ db.once('open', async () => {
       name: "2-Piece Outfit Set",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168570/2-Piece-Outfit-Set_s7edd8.png",
       gender: "boys",
-      category: categories[2]._id,
+      category: "onesies",
       price: 24.95,
       description: "Super trendy and super comfy, this pull-on sets is perfect for your little cutie.",
       patBtn: "https://buy.stripe.com/7sI17z72FdVP5Gw7sz"
@@ -30,7 +30,7 @@ db.once('open', async () => {
       name: "Hoodie Sweat Set",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168572/Hoodie-Sweat-Set_zvkoyh.png",
       gender: "boys",
-      category: categories[2]._id,
+      category: "onesies",
       price: 19.95, 
       description: "Made for the changing season, this relaxed fit set is a cozy new addition to a fall wardrobe.",
       payBtn: "https://buy.stripe.com/aEU8A15YB3hbglaaEJ"
@@ -40,7 +40,7 @@ db.once('open', async () => {
       name: "Sweater Outfit Set",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168626/Sweater_Outfit_Set_uiqbsb.png",
       gender: "girls",
-      category: categories[2]._id,
+      category: "onesies",
       price: 15.95,
       description: "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
       payBt: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
@@ -50,7 +50,7 @@ db.once('open', async () => {
       name: "Favorites Quilted Outfit Set",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168625/Favorites_Quilted_Outfit_Set_nhkmsu.png", 
       gender: "girls",
-      category: categories[2]._id,
+      category: "onesies",
       price: 15.95,
       description: "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
       payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
@@ -59,7 +59,7 @@ db.once('open', async () => {
       name: "Pocket Henley Long Sleeve Shirt",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168506/Pocket-Henley_owrbel.png",
       gender: "boys",
-      category: categories[0]._id,
+      category: "shirts",
       price: 15.95,
       description: "Crafted in super soft slub jersey, this striped henley makes the perfect layer.",
       payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
@@ -69,7 +69,7 @@ db.once('open', async () => {
       name: "Striped Heather T-Shirt",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168509/Striped-Heather-T-Shirt_zi48g3.png",
       gender: "boys",
-      category: categories[0]._id,
+      category: "shirts",
       price: 24.95,
       description: "This tee is so easy to throw on and go. It pairs well with jeans, cargos and joggers too! Plus the long sleeves will keep him cozy all season long.",
       payBtn: "https://buy.stripe.com/7sI17z72FdVP5Gw7sz"
@@ -78,7 +78,7 @@ db.once('open', async () => {
       name: "Cotton T-Shirt",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168630/Cotton-Tee_neb0pf.jpg",
       gender: "girls",
-      category: categories[0]._id,
+      category: "shirts",
       price: 19.95,
       description: "Lightweight with short sleeves, this basic tee is perfect for layered looks or starting play outfits!",
       payBtn: "https://buy.stripe.com/aEU8A15YB3hbglaaEJ"
@@ -88,7 +88,7 @@ db.once('open', async () => {
       name: "Love Bug Graphic Tee",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168631/Love-Bug-Graphic-Tee_psibyz.png",
       gender: "girls",
-      category: categories[0]._id,
+      category: "shirts",
       price: 34.95,
       description: "Crafted in soft cotton, this tee is perfect for your little love bug.",
       payBtn: "https://buy.stripe.com/8wM9E5aeR7xr8SIdQU"
@@ -97,7 +97,7 @@ db.once('open', async () => {
       name: "Everyday Pull-On Pants",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168559/Everyday-Pull-On-Pants_wrohs2.jpg",
       gender: "boys",
-      category: categories[1]._id,
+      category: "pants",
       price: 24.95,
       description: "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
       payBtn: "https://buy.stripe.com/dR68A1aeR6tngla146"
@@ -107,7 +107,7 @@ db.once('open', async () => {
       name: "Relaxed Fit Pull-On Joggers",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168560/Relaxed-Fit-Pull-On-Joggers_u2r1b8.jpg",
       gender: "boys",
-      category: categories[1]._id,
+      category: "pants",
       price: 19.95, 
       description: "Made for the changing season, these relaxed fit joggers are a cozy new addition to their fall wardrobe. Plus, a functional drawstring makes them the perfect fit every time.",
       payBtn: "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
@@ -117,7 +117,7 @@ db.once('open', async () => {
       name: "Heart Leggings",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168612/Heart-Leggings_k4ydtz.jpg",
       gender: "girls",
-      category: categories[1]._id,
+      category: "pants",
       price: 15.95,
       description: "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
       payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
@@ -127,7 +127,7 @@ db.once('open', async () => {
       name: "Pull-On Flare Pants",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168614/Pull-On-Flare-Pants_pkxikl.png",
       gender: "girls",
-      category: categories[1]._id,
+      category: "pants",
       price: 15.95,
       description: "Super trendy and super comfy, these pull-on flare pants are perfect for your little cutie.",
       payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"

@@ -218,9 +218,18 @@ if(loading) {
                 
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
               >
-                Checkout
+                Add to Cart
               
               </a>
+              <a href={product.payBtn}
+            
+            type="click"
+            
+            className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+          >
+            Checkout
+          
+          </a>
             </form>
           </div>
 

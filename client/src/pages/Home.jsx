@@ -47,6 +47,8 @@ const filters = [
 
 
 
+
+
 const Home = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
  ;
@@ -144,10 +146,11 @@ return (
                     </h3>
                 )}
               </Disclosure>
-              <Disclosure as="div" className="border-b border-gray-200 py-6">
+<a href="/category/655b0445c80d4cb8a138cc0a">
+              <Disclosure as="div" href="http://localhost:3000/category/655b0445c80d4cb8a138cc0a" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <Disclosure.Button href='/category/"655b0445c80d4cb8a138cc0a"'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         <span className="font-medium text-gray-900">Pants</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
@@ -160,6 +163,7 @@ return (
                     </h3>
                 )}
               </Disclosure>
+            </a>
               <Disclosure as="div" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
