@@ -24,7 +24,7 @@ db.once('open', async () => {
       category: "onesies",
       price: 24.95,
       description: "Super trendy and super comfy, this pull-on sets is perfect for your little cutie.",
-      patBtn: "https://buy.stripe.com/7sI17z72FdVP5Gw7sz"
+      payBtn: "https://buy.stripe.com/7sI17z72FdVP5Gw7sz"
     },
     {
       name: "Hoodie Sweat Set",
@@ -43,7 +43,7 @@ db.once('open', async () => {
       category: "onesies",
       price: 15.95,
       description: "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
-      payBt: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
    
     {

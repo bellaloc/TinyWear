@@ -3,8 +3,8 @@ import React from 'react'
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
-// import { useEffect } from 'react';
-
+// import { useEffect } from 'react'
+import Auth from '../utils/auth'
 import { useQuery } from '@apollo/client';
 
 import { useParams } from 'react-router-dom'
@@ -50,6 +50,7 @@ if(loading) {
   return <div>Loading...</div>
 }
   return (
+   
     <>
     <div className="bg-white">
         <div className="pt-6">
@@ -167,6 +168,8 @@ if(loading) {
                   </div>
                 </RadioGroup>
               </div>
+              {Auth.loggedIn() ? (
+                <>
               <a href={product.payBtn}
                 type="click"
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
@@ -180,15 +183,22 @@ if(loading) {
               >
                 Add To Cart
               </a>
-              <a href={product.payBtn}
-            
-            type="click"
-            
-            className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
-          >
-            Checkout
-          
-          </a>
+              </>
+              ) : (
+                <>
+                <a href='/signin'
+                type="click"
+                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+              >
+                Checkout
+              </a>
+              <a href='/signin' type="click"
+                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+              >
+                Add To Cart
+              </a>
+              </>
+              )}
             </form>
           </div>
           </div>
