@@ -1,11 +1,6 @@
 import Card from "../components/Card";
-
-
-
-// sidebar
 import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import {  Disclosure, Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon,  MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
 
 const sortOptions = [
@@ -13,46 +8,8 @@ const sortOptions = [
   { name: 'Price: High to Low', href: '#', current: false },
 ]
 
-const filters = [
-  {
-    id: 'color',
-    name: 'Color',
-    options: [
-      { value: 'beige', label: 'Beige', checked: false },
-      { value: 'grey', label: 'Grey', checked: false },
-      { value: 'blue', label: 'Blue', checked: true },
-      { value: 'pink', label: 'Pink', checked: false },
-      { value: 'multi', label: 'Multi', checked: false },
-    ],
-  },
-  {
-    id: 'category',
-    name: 'Category',
-    options: [
-      { value: 'shirts', label: 'Shirts', checked: false },
-      { value: 'pants', label: 'Pants', checked: false },
-      { value: 'sets', label: 'Sets', checked: true },
-    ],
-  },
-  {
-    id: 'size',
-    name: 'Size',
-    options: [
-      { value: '2T', label: '2T', checked: false },
-      { value: '3T', label: '3T', checked: false },
-      { value: '4T', label: '4T', checked: false },
-    ],
-  },
-]
-
-
-
-
 
 const Home = () => {
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
- ;
-
 
  return (
   <div className="bg-white">

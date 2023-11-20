@@ -1,22 +1,24 @@
-// https://tailwindui.com/components/application-ui/navigation/navbars
 import logo from '../assets/images/logo/logo.png';
-
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Disclosure} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import { Link } from 'react-router-dom'
+import Auth from '../utils/auth'
 const navigation = [
   { name: 'Log Out', href: '#', current: false },
-  // { name: 'Team', href: '#', current: false },
-  // { name: 'Projects', href: '#', current: false },
-  // { name: 'Calendar', href: '#', current: false },
 ]
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+  
+  const logout = (event) => {
+  event.preventDefault();
+  Auth.logout();
+};
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -36,20 +38,32 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
            
-              
            
                 <div className="hidden sm:ml-6 sm:block">
-                  {/* logout button */}
+                 
                   <div className="flex space-x-4">
-                   
-                      <a
-                        key="/signin"
-                        href="/signin"
-                        className='bg-gray-900 text-white' >
-                        LOGIN
-                      </a>
-                      <div></div>
-                      <br></br>
+                 
+              {Auth.loggedIn() ? (
+            <>
+             
+              <button className='bg-gray-900 text-white' onClick={logout} href='/signin'>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className='bg-gray-900 text-white' to="/signin">
+                Login
+              </Link>
+              <Link className='bg-gray-900 text-white' to="/signup">
+                Signup
+              </Link>
+            </>
+          )}
+                
+                     
+                    
+                
                       <a
                         key="/signin"
                         href="/signin"
