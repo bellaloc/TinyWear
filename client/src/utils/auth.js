@@ -31,6 +31,36 @@ class AuthService {
     // this will reload the page and reset the state of the application
     window.location.reload();
   }
+  async signup(userData) {
+    try {
+      // Perform the sign-up API request here, e.g., using fetch or your preferred method
+      const response = await fetch('YOUR_SIGNUP_API_ENDPOINT', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+
+      if (!response.ok) {
+        // Handle signup failure, maybe throw an error or return a specific response
+        throw new Error('Signup failed');
+      }
+
+      // Assuming your signup API returns the new user's token
+      const { token } = await response.json();
+
+      // Save the token and reload the application
+      this.login(token);
+
+      return { success: true };
+    } catch (error) {
+      // Handle any errors during the signup process
+      console.error('Signup error:', error);
+      return { success: false, error: 'Signup failed' };
+    }
+  }
 }
+
 
 export default new AuthService();
