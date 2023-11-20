@@ -9,6 +9,8 @@ import SignIn from './pages/SignIn';
 import Checkout from './pages/Checkout';
 import Signup from './pages/Signup.jsx';
 import ShirtCard from './components/ShirtCard.jsx'
+import PantCard from  './components/PantCard.jsx'
+import OnesieCard from './components/OnesieCard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,8 +35,16 @@ const router = createBrowserRouter([
         element: <Signup />
       },
       {
-        path: '/category/:categoryId',
+        path: '/category/shirts',
         element: <ShirtCard/>
+      },
+      {
+        path: '/category/pants',
+        element: <PantCard/>
+      },
+      {
+        path: '/category/onesies',
+        element: <OnesieCard/>
       },
      
     ],
