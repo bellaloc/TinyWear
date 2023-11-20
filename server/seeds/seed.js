@@ -23,7 +23,8 @@ db.once('open', async () => {
       gender: "boys",
       category: categories[2]._id,
       price: 24.95,
-      description: "Super trendy and super comfy, this pull-on sets is perfect for your little cutie."
+      description: "Super trendy and super comfy, this pull-on sets is perfect for your little cutie.",
+      patBtn: "https://buy.stripe.com/7sI17z72FdVP5Gw7sz"
     },
     {
       name: "Hoodie Sweat Set",
@@ -57,7 +58,6 @@ db.once('open', async () => {
     {
       name: "Pocket Henley Long Sleeve Shirt",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168506/Pocket-Henley_owrbel.png",
-  
       gender: "boys",
       category: categories[0]._id,
       price: 15.95,
@@ -96,7 +96,6 @@ db.once('open', async () => {
     {
       name: "Everyday Pull-On Pants",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168559/Everyday-Pull-On-Pants_wrohs2.jpg",
- 
       gender: "boys",
       category: categories[1]._id,
       price: 24.95,
@@ -107,7 +106,6 @@ db.once('open', async () => {
     {
       name: "Relaxed Fit Pull-On Joggers",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168560/Relaxed-Fit-Pull-On-Joggers_u2r1b8.jpg",
-   
       gender: "boys",
       category: categories[1]._id,
       price: 19.95, 
@@ -118,18 +116,16 @@ db.once('open', async () => {
     {
       name: "Heart Leggings",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168612/Heart-Leggings_k4ydtz.jpg",
-     
       gender: "girls",
       category: categories[1]._id,
       price: 15.95,
       description: "Designed with an easy on waistband and lots of stretch, these cute leggings are perfect for your active girl.",
-    payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     
     {
       name: "Pull-On Flare Pants",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168614/Pull-On-Flare-Pants_pkxikl.png",
-
       gender: "girls",
       category: categories[1]._id,
       price: 15.95,

@@ -63,9 +63,10 @@ const resolvers = {
 
       return await Product.find(params).populate('category');
     },
-    product: async (parent, { _id }) => {
-      return await Product.findById(_id).populate('category');
-    },
+    product: async (parent, { productId }) => {
+
+        return await Product.findOne({ _id: productId })
+      },
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
