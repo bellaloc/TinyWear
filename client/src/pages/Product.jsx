@@ -22,6 +22,15 @@ const { loading, data } = useQuery(QUERY_SHIRTS,
 
 const shirts = data?.shirts || [];
 
+// State to track items in the cart
+const [cart, setCart] = useState([]);
+
+// Function to add items to the cart
+const addToCart = () => {
+  // Assuming you want to add the current shirt to the cart
+  setCart([...cart, shirts.find(shirt => shirt._id === shirtId)]);
+};
+
 // for reviews
 const reviews = { href: '#', average: 4, totalCount: 117 }
 function classNames(...classes) {
@@ -206,12 +215,21 @@ const [selectedSize, setSelectedSize] = useState(product.sizes[2])
               </div>
 
               <button
-                type="submit"
-                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+                  type="button" 
+                  onClick={addToCart}
+                  className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+                >
+                  Add To Cart
+                </button>
+              </form>
+
+              {/* "Go to Cart" button */}
+              <Link
+                to="/checkout" 
+                className="mt-4 flex w-full items-center justify-center rounded-md border border-transparent bg-gray-200 px-8 py-3 text-base font-medium text-gray-700 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2"
               >
-                Add To Cart
-              </button>
-            </form>
+                Go to Cart
+              </Link>
           </div>
 
           </div>
