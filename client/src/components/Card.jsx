@@ -1,14 +1,20 @@
 import { useQuery } from '@apollo/client';
-import { QUERY_SHIRTS, QUERY_PANTS, QUERY_ONESIES } from '../utils/queries.js'
+import { QUERY_ALL_PRODUCTS } from '../utils/queries.js'
 
 const Card = () => {
 
-const { loading, data } = useQuery(QUERY_SHIRTS, QUERY_PANTS, QUERY_ONESIES)
-const shirts = data?.shirts || [];
-const pants = data?.pants || []; 
-const onesies = data?.onsies || [];
+const { loading, data } = useQuery(QUERY_ALL_PRODUCTS)
+  
+const products = data?.products || [];
+console.log(products.name) 
 
+// function filterProducts() {
+//   if (!currentCategory) {
+//     return state.products;
+//   }
 
+//   return state.products.filter(product => product.category._id === currentCategory);
+// }
 
 return (
   <>
@@ -20,43 +26,21 @@ return (
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <h2 className="sr-only">Products</h2>
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            {shirts.map(shirt => (
-              <a key={shirt._id} href={`/product/${shirt._id}`} className="group">
-                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                  <img
-                    src={shirt.img}
-                    className="h-full w-full object-cover object-center group-hover:opacity-75"
-                  />
-                </div>
-                <h3 className="mt-4 text-sm text-gray-700">{shirt.name}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">{shirt.price}</p>
-              </a>
-              ) )}
-                {pants.map(pant => (
-                  <a key={pant._id} href={`/product/${pant._id}`} className="group">
+            
+                {products.map(products => (
+                  <a key={products._id} href={`/product/${products._id}`} className="group">
                     <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                       <img
-                        src={pant.img}
+                        src={products.img}
                         className="h-full w-full object-cover object-center group-hover:opacity-75"
                       />
                     </div>
-                    <h3 className="mt-4 text-sm text-gray-700">{pant.name}</h3>
-                    <p className="mt-1 text-lg font-medium text-gray-900">{pant.price}</p>
+                    <h3 className="mt-4 text-sm text-gray-700">{products.name}</h3>
+                    <p className="mt-1 text-lg font-medium text-gray-900">{products.price}</p>
                     
                   </a>
               )) }
-                    {onesies.map(onesie => (
-                    <a key={onesie._id} href={`/product/${onesie._id}`} className="group">
-                      <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                        <img
-                          src={onesie.img}
-                          className="h-full w-full object-cover object-center group-hover:opacity-75"
-                        />
-                      </div>
-                      <h3 className="mt-4 text-sm text-gray-700">{onesie.name}</h3>
-                      <p className="mt-1 text-lg font-medium text-gray-900">{onesie.price}</p>
-                    </a>
-                ))}
+                   
               </div>
             </div>
         </div>

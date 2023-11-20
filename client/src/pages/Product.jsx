@@ -5,22 +5,22 @@ import { RadioGroup } from '@headlessui/react'
 
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom';
-import { QUERY_SHIRTS } from '../utils/queries.js'
+import { QUERY_PRODUCTS } from '../utils/queries.js'
 
 
 
 const SingleProduct = () => {
-  const { shirtId } = useParams();
+  const { productId } = useParams();
 
-const { loading, data } = useQuery(QUERY_SHIRTS, 
+const { loading, data } = useQuery(QUERY_PRODUCTS, 
   {
   // pass URL parameter
-  variables: { shirtId: shirtId },
+  variables: { productId: productId },
 }
 );
 
 
-const shirts = data?.shirts || [];
+const products = data?.products || [];
 
 // for reviews
 const reviews = { href: '#', average: 4, totalCount: 117 }
@@ -53,13 +53,13 @@ const [selectedSize, setSelectedSize] = useState(product.sizes[2])
     ) : (
     <div className="bg-white">
     
-      {shirts.map(shirt => (
+      {products.map(product => (
         <div className="pt-6">
         {/* Product Image */}
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="aspect-h-4 aspect-w-3 overflow-hidden rounded-lg lg:block">
             <img
-              src={shirt.img}
+              src={product.img}
               className="h-full w-full object-cover object-center"
             /> 
           </div>
@@ -67,23 +67,23 @@ const [selectedSize, setSelectedSize] = useState(product.sizes[2])
         {/* Product Name */}
         <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{shirt.name}</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{product.name}</h1>
           </div>
           {/* Product Description */}
           <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
             <div>
               <h3 className="sr-only">Description</h3>
               <div className="space-y-6">
-                <p className="text-base text-gray-900">{shirt.description}</p>
+                <p className="text-base text-gray-900">{product.description}</p>
               </div>
             </div>
             
           {/* Price */}
           {/* grey line */}
-          <hr class="h-px my-8 bg-gray-200 border-1 dark:bg-gray"></hr>
+          <hr className="h-px my-8 bg-gray-200 border-1 dark:bg-gray"></hr>
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
-            <p className=" mt-6 text-3xl tracking-tight text-gray-900">${shirt.price}</p>
+            <p className=" mt-6 text-3xl tracking-tight text-gray-900">${product.price}</p>
             {/* Reviews */}
             <div className="mt-6">
               <h3 className="sr-only">Reviews</h3>

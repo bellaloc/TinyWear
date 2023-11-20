@@ -1,8 +1,5 @@
 import Card from "../components/Card";
-// import { useQuery } from '@apollo/client';
-// import { QUERY_PRODUCTS } from '../utils/queries';
-import { QUERY_FILTERED_SHIRTS } from '../utils/queries'
-import { useQuery } from '@apollo/client';
+
 
 
 // sidebar
@@ -57,8 +54,7 @@ function classNames(...classes) {
 
 const Home = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-  const { loading, data} = useQuery(QUERY_FILTERED_SHIRTS)
-  const products = data?.product || [];
+ ;
 return (
   <div className="bg-white">
   <div>
