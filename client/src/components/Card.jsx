@@ -6,7 +6,7 @@ const Card = () => {
 const { loading, data } = useQuery(QUERY_ALL_PRODUCTS)
   
 const products = data?.products || [];
-console.log(products.name) 
+
 
 
 // FILTER METHOD FOR CATEGORIES
