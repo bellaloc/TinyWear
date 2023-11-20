@@ -8,6 +8,13 @@ const { loading, data } = useQuery(QUERY_ALL_PRODUCTS)
 const products = data?.products || [];
 console.log(products.name) 
 
+
+// FILTER METHOD FOR CATEGORIES
+// const query = "shirts"
+// const shirts = products.filter((item) => item.category == query);
+
+
+
 // function filterProducts() {
 //   if (!currentCategory) {
 //     return state.products;

@@ -50,7 +50,9 @@ const filters = [
 const Home = () => {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
  ;
-return (
+
+
+ return (
   <div className="bg-white">
   <div>
    
