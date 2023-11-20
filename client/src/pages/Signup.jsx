@@ -7,12 +7,14 @@ import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const Signup = () => {
+  const history = useHistory(); 
+  
     const [formState, setFormState] = useState({
       email: '',
       password: '',
     });
-    const [addUser, { error, data }] = useMutation(ADD_USER);
-  
+    //const [addUser, { error, data }] = useMutation(ADD_USER);
+    const { error: mutationError, data: mutationData } = useMutation(ADD_USER);
     const handleChange = (event) => {
       const { name, value } = event.target;
   
@@ -32,6 +34,7 @@ const Signup = () => {
         });
   
         Auth.login(data.addUser.token);
+        history.push('/');
       } catch (e) {
         console.error(e);
       }
@@ -41,6 +44,7 @@ const Signup = () => {
       <>
         
         {/* sign in */}
+        
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 mt-20 mb-64">          <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             {/* <img
               className="mx-auto h-10 w-auto"
@@ -57,7 +61,8 @@ const Signup = () => {
           {data ? (
               <p>
                 Success! {' '}
-                <Link to="/">Go to homepage.</Link>
+                {/* <Link to="/">Go to homepage.</Link> */}
+                <span onClick={() => history.push('/')}>Go to homepage.</span>
               </p>
             ) : (
             <form className="space-y-6" onSubmit={handleFormSubmit} >
