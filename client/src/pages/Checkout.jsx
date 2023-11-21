@@ -19,10 +19,12 @@ const Checkout = () => {
       console.log(error)
     }
   }
+   
 
   const tokenHandler = (token) => {
     handleToken(100,token)
-  }
+  
+}
 
 
 
@@ -143,6 +145,7 @@ const Checkout = () => {
                           className="flex items-center justify-center rounded-md border border-transparent bg-cyan-900 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-700"
                         >
                           Checkout
+
                         </a>
                         )}
                       </div>

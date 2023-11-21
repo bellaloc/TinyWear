@@ -4,31 +4,33 @@ const stripe = require('stripe')('sk_test_51OCV4QCQg4jIgzVLmIXR1EHzyC683Sq3PFcYP
 const router = express.Router()
 const { v4: uuidv4 } = require('uuid')
 
-router.get('/' , (req,res,next) => {
+router.get('/' (req,res,next) => {
   console.log("hello")
-  res.json({
-    message: 'it works'
-  });
-});
+  res.json({})
+})
 
 router.post('/pay', async (req, res, next) => {
   console.log(req.body.token)
   const{token, amount} = req.body;
   const idempotency = uuidv4();
-  
-  return stripe.customers.create({
-    email: token.email,
-    source: token}).then(user=>{
-      stripe.charges.create({
-        amount:amount * 100,
-        currency: 'usd',
-        user: user.id
-      }, {idempotencyKey})
-    }).then(result => {
-      res.status(200).json(result)
-    }).catch(err => {
-      console.log(err)
-    });
+  const session = await stripe.checkout.sessions.create({
+    line_items: [
+      {
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: 'T-shirt',
+          },
+          unit_amount: 2000,
+        },
+        quantity: 1,
+      },
+    ],
+    mode: 'payment',
+    success_url: '/login',
+    cancel_url: '/signin',
   });
+  res.send({url: session.url});
+});
 
 module.exports = router
