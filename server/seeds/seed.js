@@ -18,17 +18,17 @@ db.once('open', async () => {
 
   const products = await Product.insertMany([
     {
-      name: "2-Piece Outfit Set",
-      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168570/2-Piece-Outfit-Set_s7edd8.png",
+      name: "2-Piece Striped Top & Jogger Set",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700603231/2-Piece_Striped_Top_Jogger_Set_y4i8gf.jpg",
       gender: "boys",
       category: "onesies",
       price: 24.95,
-      description: "Super trendy and super comfy, this pull-on sets is perfect for your little cutie.",
+      description: "Made to match, this set is complete with a striped top and a pair of coordinating easy-on joggers.",
       payBtn: "https://buy.stripe.com/7sI17z72FdVP5Gw7sz"
     },
     {
-      name: "Hoodie Sweat Set",
-      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168572/Hoodie-Sweat-Set_zvkoyh.png",
+      name: "2-Piece Navy Construction Truck Hoodie and Pants Set",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700603344/2Q074310_mdjxvo.jpg",
       gender: "boys",
       category: "onesies",
       price: 19.95, 
@@ -36,21 +36,21 @@ db.once('open', async () => {
       payBtn: "https://buy.stripe.com/aEU8A15YB3hbglaaEJ"
     },
     {
-      name: "Sweater Outfit Set",
-      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168626/Sweater_Outfit_Set_uiqbsb.png",
+      name: "2-Piece Floral Top & Legging Set",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700603605/2O621810_gadvt8.webp",
       gender: "girls",
       category: "onesies",
       price: 15.95,
-      description: "Designed with an easy on waistband and lots of stretch, this cute Onesie set is perfect for your active girl.",
+      description: "2-Piece Navy Construction Truck Hoodie and Pants Set",
       payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
-      name: "Favorites Quilted Outfit Set",
-      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700168625/Favorites_Quilted_Outfit_Set_nhkmsu.png", 
+      name: "2-Piece French Terry Outfit Set",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700603605/2O032110_vsu9ij.jpg", 
       gender: "girls",
       category: "onesies",
       price: 15.95,
-      description: "Super trendy and super comfy, this Quilted Onesie set is perfect for your little cutie.",
+      description: "Made to match, this set is complete with a long-sleeve tee and coordinating pair of knit denim pants.",
       payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
