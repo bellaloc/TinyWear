@@ -7,8 +7,8 @@ import Auth from '../utils/auth'
 const Checkout = () => {
   const [open, setOpen] = useState(true)
 
-  var cartContent = JSON.parse(localStorage.getItem("saveToCart"));
-  // console.log(cartContent);
+  var cartContent = JSON.parse(localStorage.getItem("savedCart"));
+  console.log(cartContent);
 
   return (
     <div className="flex min-h-full flex-1 lg:px-8 py-80 mb-44">
@@ -64,7 +64,7 @@ const Checkout = () => {
                   
                         <div className="flow-root">
                           <ul role="list" className="-my-6 divide-y divide-gray-200">
-                         {/* {cartContent.map((cartContent) => (  */}
+                         {cartContent.map((cartContent) => ( 
                             <li className="flex py-6">
                                 <div className="h-30 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                   <img
@@ -97,7 +97,7 @@ const Checkout = () => {
                                   </div>
                                 </div>
                               </li> 
-                             {/* ))}  */}
+                           ))}   
                          </ul>
                         </div> 
                       </div>
