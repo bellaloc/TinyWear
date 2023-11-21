@@ -14,8 +14,6 @@ const Home = () => {
  return (
   <div className="bg-white">
   <div>
-   
-
     <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900">Products</h1>
@@ -63,19 +61,6 @@ const Home = () => {
               </Menu.Items>
             </Transition>
           </Menu>
-
-          {/* <button type="button" className="-m-2 ml-5 p-2 text-gray-400 hover:text-gray-500 sm:ml-7">
-            <span className="sr-only">View grid</span>
-            <Squares2X2Icon className="h-5 w-5" aria-hidden="true" />
-          </button>
-          <button
-            type="button"
-            className="-m-2 ml-4 p-2 text-gray-400 hover:text-gray-500 sm:ml-6 lg:hidden"
-            onClick={() => setMobileFiltersOpen(true)}
-          >
-            <span className="sr-only">Filters</span>
-            <FunnelIcon className="h-5 w-5" aria-hidden="true" />
-          </button> */}
         </div>
       </div>
 
@@ -87,8 +72,6 @@ const Home = () => {
           <form className="hidden lg:block">
             <h3 className="sr-only">Categories</h3>
            
-
-            
               <a href="/category/shirts">
               <Disclosure as="div" href="http://localhost:3000/category/shirts" className="border-b border-gray-200 py-6">
                 {({ open }) => (
@@ -107,7 +90,7 @@ const Home = () => {
                 )}
               </Disclosure>
             </a>
-<a href="/category/pants">
+              <a href="/category/pants">
               <Disclosure as="div" href="http://localhost:3000/category/pants" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
@@ -142,22 +125,17 @@ const Home = () => {
                 )}
               </Disclosure>
             </a>
-           
           </form>
-
 
           {/* Product grid */}
           <Card /> 
-
+          
         </div>
       </section>
     </main>
   </div>
 </div>
-
-
 )
-
 }
 
 

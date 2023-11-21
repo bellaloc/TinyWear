@@ -21,46 +21,38 @@ const { loading, data } = useQuery(QUERY_PRODUCT, {
 const product = data?.product || {};
 
 
-// LOCAL STORAGE FOR CART
+// Putting cart in local storage
 const addToCart = (e) => {
   e.preventDefault()
-  // grab data needed for the object (console logging data)
-  // object of data
+
     const saveToCart = {
       price: product.price,
       size: classe.sizes[2].name,
       img: product.img,
       name: product.name
     }
-  // putting cart in local storage
-    // check local storage and make sure nothing is there (localStorage.getItem)
-    // assign variable to what's in local storage
     var savedCart = JSON.parse(localStorage.getItem("savedCart"));
     console.log(savedCart)
       if (savedCart == null) {
-    // if nothing in local storage make variable (make it an array)
     const savedCart = [];
     savedCart.push(saveToCart);
-    // need to stringify the cart we're saving
+
       localStorage.setItem("savedCart", JSON.stringify(savedCart));
-    // use push method to put the cart items into cart object (push method)
-    // add it to local storage (localStorage.setItem)
+
       } else {
         savedCart.push(saveToCart);
         localStorage.setItem("savedCart", JSON.stringify(savedCart));
-        // console.log(savedCart)
       }
   }
   
 
-
-// for reviews
+// For reviews
 const reviews = { href: '#', average: 4, totalCount: 117 }
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-// for and sizes
+// For sizes
 const classe = {
   sizes: [
     { name: 'T2', inStock: true },
