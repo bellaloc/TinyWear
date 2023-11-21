@@ -2,6 +2,7 @@ const express = require('express');
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4'); 
 const stripe = require('./Stripe/index')
+const cors = require('cors')
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 const PORT = process.env.PORT || 3001;
@@ -13,9 +14,11 @@ const server = new ApolloServer({
 
 const startApolloServer = async () => {
   await server.start();
- 
+
+  app.use(cors())
   app.use(express.urlencoded({ extended: true }));
   app.use(express.json());
+  
   app.use('/graphql', expressMiddleware(server));
   app.use('api/stripe', stripe)
    
