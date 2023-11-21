@@ -33,7 +33,8 @@ const Checkout = () => {
   for ( const product of cartContent ) {
     totalPrice += product.price
   }
-  const fixedNum = Math.round(totalPrice*100)/100;
+
+  var fixedNum = totalPrice.toFixed(2);
  
   // const deleteHandler = (e) => {
   //   e.preventDefault()
@@ -144,7 +145,7 @@ const Checkout = () => {
                          <Stripe 
                            stripeKey='pk_test_51OCV4QCQg4jIgzVLeawWDTcJ9Ou3zt0wnGOox7ilt08BgACMZvtaDed0UWHiCNPllVpVxEntKFZYmFbIu1wUcrPz00fFKkMPJR'
                            token={tokenHandler}
-                           amount={totalPrice}/>
+                           amount={cartContent.price}/>
                         ) : (
                           <a
                           href="/signin"
