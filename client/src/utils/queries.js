@@ -22,86 +22,81 @@ export const QUERY_SINGLE_PROFILE = gql`
 }
 `
 
-export const QUERY_SHIRTS = gql`
-query shirts {
-  shirts {
-    _id
-    name
-    img
-    size
-    gender
-    color
-    price
-    description
+export const QUERY_CHECKOUT = gql`
+  query getCheckout($products: [ID]!) {
+    checkout(products: $products) {
+      session
+    }
   }
-}`
-export const QUERY_PANTS = gql`
-query shirts {
-  shirts {
-    _id
-    name
-    img
-    size
-    gender
-    color
-    price
-    description
-  }
-}`
-export const QUERY_ONESIES = gql`
-query shirts {
-  shirts {
-    _id
-    name
-    img
-    size
-    gender
-    color
-    price
-    description
-  }
-}`
+`;
 
-export const QUERY_FILTERED_SHIRTS = gql`
-query filteredShirts ($size: Int) {
-  filteredShirts(size: $size) {
+export const QUERY_PRODUCT = gql`
+query Query($productId: ID!) {
+  product(productId: $productId) {
     _id
     name
     img
-    size
     gender
-    color
     price
-    itemDescription
+    description
+    payBtn
   }
 }
-`
+`;
 
-export const GET_CLOTHING_ITEMS = gql`
-  query GetClothingItems {
-    clothingItems {
-      id
+
+
+export const QUERY_CATEGORIES = gql`
+  {
+    categories {
+      _id
       name
-      category
-      age
-      gender
-      price
+    }
+  }
+`;
+
+export const QUERY_USER = gql`
+  {
+    user {
+      email
+      orders {
+        _id
+        purchaseDate
+        products {
+          _id
+          name
+          img
+          gender
+          category {
+            name
+          }
+          price
+          description
+          payBtn
+        }
+      }
     }
   }
 `;
 
 
-// export const QUERY_SINGLE_PRODUCT = gql`
-//   query getSingleProduct(productId: ID!) {
-//     product(productId: $productId) {
-//       _id
-//       name
-//       img
-//       size
-//       gender
-//       color
-//       price
-//       description
-//     }
-//   }
-// `;
+
+
+
+export const QUERY_ALL_PRODUCTS = gql`
+  {
+    products {
+      _id
+      name
+      img
+      gender
+      category {
+        name
+      }
+      price
+      description
+      payBtn
+      
+    }
+  }
+`;

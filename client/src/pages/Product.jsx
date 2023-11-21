@@ -1,26 +1,33 @@
 
+import React from 'react'
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
 
 import { useQuery } from '@apollo/client';
-import { useParams } from 'react-router-dom';
-import { QUERY_SHIRTS } from '../utils/queries.js'
 
+import { useParams } from 'react-router-dom'
 
+import { QUERY_PRODUCT } from '../utils/queries.js'
+
+// import Auth from '../utils/auth';
 
 const SingleProduct = () => {
-  const { shirtId } = useParams();
+  const { productId } = useParams();
 
-const { loading, data } = useQuery(QUERY_SHIRTS, 
-  {
-  // pass URL parameter
-  variables: { shirtId: shirtId },
-}
+const { loading, data } = useQuery(QUERY_PRODUCT, {
+  variables: { productId: productId },
+ 
+} 
 );
 
+const product = data?.product || {};
+console.log(data)
 
-const shirts = data?.shirts || [];
+
+// if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+//   return <Navigate to="/login" />;
+// }
 
 // for reviews
 const reviews = { href: '#', average: 4, totalCount: 117 }
@@ -29,7 +36,7 @@ function classNames(...classes) {
 }
 
 // for colors and sizes
-const product = {
+const classe = {
   colors: [
     { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
     { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
@@ -43,23 +50,24 @@ const product = {
 }
 
 // const [selectedColor, setSelectedColor] = useState(product.colors[0])
-const [selectedSize, setSelectedSize] = useState(product.sizes[2])
+const [selectedSize, setSelectedSize] = useState(classe.sizes[2])
 
-
+if(loading) {
+  return <div>Loading...</div>
+}
   return (
     <>
-    {loading ? (
-    <div> loading... </div>
-    ) : (
+   
+    
     <div className="bg-white">
     
-      {shirts.map(shirt => (
+      
         <div className="pt-6">
         {/* Product Image */}
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="aspect-h-4 aspect-w-3 overflow-hidden rounded-lg lg:block">
             <img
-              src={shirt.img}
+              src={product.img}
               className="h-full w-full object-cover object-center"
             /> 
           </div>
@@ -67,23 +75,23 @@ const [selectedSize, setSelectedSize] = useState(product.sizes[2])
         {/* Product Name */}
         <div className="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{shirt.name}</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">{product.name}</h1>
           </div>
           {/* Product Description */}
           <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
             <div>
               <h3 className="sr-only">Description</h3>
               <div className="space-y-6">
-                <p className="text-base text-gray-900">{shirt.description}</p>
+                <p className="text-base text-gray-900">{product.description}</p>
               </div>
             </div>
             
           {/* Price */}
           {/* grey line */}
-          <hr class="h-px my-8 bg-gray-200 border-1 dark:bg-gray"></hr>
+          <hr className="h-px my-8 bg-gray-200 border-1 dark:bg-gray"></hr>
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
-            <p className=" mt-6 text-3xl tracking-tight text-gray-900">${shirt.price}</p>
+            <p className=" mt-6 text-3xl tracking-tight text-gray-900">${product.price}</p>
             {/* Reviews */}
             <div className="mt-6">
               <h3 className="sr-only">Reviews</h3>
@@ -95,7 +103,7 @@ const [selectedSize, setSelectedSize] = useState(product.sizes[2])
                       className={classNames(
                         reviews.average > rating ? 'text-gray-900' : 'text-gray-200',
                         'h-5 w-5 flex-shrink-0'
-                      )}
+                     )}
                       aria-hidden="true"
                     />
                   ))}
@@ -155,7 +163,7 @@ const [selectedSize, setSelectedSize] = useState(product.sizes[2])
                 <RadioGroup value={selectedSize} onChange={setSelectedSize} className="mt-4">
                   <RadioGroup.Label className="sr-only">Choose a size</RadioGroup.Label>
                   <div className="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
-                    {product.sizes.map((size) => (
+                    {classe.sizes.map((size) => (
                       <RadioGroup.Option
                         key={size.name}
                         value={size}
@@ -204,13 +212,15 @@ const [selectedSize, setSelectedSize] = useState(product.sizes[2])
                   </div>
                 </RadioGroup>
               </div>
-
-              <button
-                type="submit"
+              <a href={product.payBtn}
+            
+                type="click"
+                
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
               >
-                Add To Cart
-              </button>
+                Checkout
+              
+              </a>
             </form>
           </div>
 
@@ -225,16 +235,13 @@ const [selectedSize, setSelectedSize] = useState(product.sizes[2])
         </div>
 
         
-
-        
       </div>
-  ))}
+
 
     </div>
 
 
-      )
-      }
+      
       </>   
   )
 }

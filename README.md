@@ -16,6 +16,7 @@
 
 TinyWear is an ecommerce platform for toddler clothing, specializing in shirts, pants, and sets. It provides a user-friendly interface for customers to browse and purchase toddler clothes based on age and gender.
 
+
 ## Features
 
 - **Category Sorting:** Browse clothing items categorized as shirts, pants, and sets.
@@ -47,11 +48,7 @@ Before you begin, ensure you have met the following requirements:
 
 - npm install
 
-- npm run seed 
-
 - npm run build 
-
-- npm run develop
 
 - Set up your MongoDB database and update the connection string in config/connection.js.
 
@@ -63,7 +60,7 @@ Before you begin, ensure you have met the following requirements:
 
 -Start the server:
 
-- npm start
+- npm run develop
 
 - Open your browser and visit http://localhost:3001 to access the application.
 
@@ -73,6 +70,9 @@ Backend: Node.js, Express
 Database: MongoDB
 GraphQL: Apollo Server
 Other: HTML, CSS, JavaScript
+In addition:
+This Ecommerce site uses Tailwind UI as the CSS framework.
+The payment processing is managed by Stripe for integrated terminal.
 
 # Contributing
 Contributions are welcome! Please follow the Contribution Guidelines.
