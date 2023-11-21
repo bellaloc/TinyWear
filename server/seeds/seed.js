@@ -132,7 +132,7 @@ db.once('open', async () => {
       category: "shirts",
       price: 15.95,
       description: "Crafted in lightweight jersey with a front pocket, this tee is a closet essential.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "Pocket Henley",
@@ -141,7 +141,7 @@ db.once('open', async () => {
       category: "shirts",
       price: 15.95,
       description: "This henley is perfect for the changing season. Easy to pair and perfect for him!",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "Pullover Cotton Sweater",
@@ -150,7 +150,7 @@ db.once('open', async () => {
       category: "shirts",
       price: 34.95,
       description: "He'll look extra handsome in this pullover sweater, complete with a front button placket and cozy ribbed trim.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/8wM9E5aeR7xr8SIdQU"
     },
     {
       name: "Cotton Turtleneck",
@@ -159,7 +159,7 @@ db.once('open', async () => {
       category: "shirts",
       price: 19.95,
       description: "Designed with long cozy sleeves, this turtleneck is a cold-weather favorite.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
     },
     {
       name: "Striped Pocket Jersey Tee",
@@ -168,7 +168,7 @@ db.once('open', async () => {
       category: "shirts",
       price: 15.95,
       description: "This striped pocket tee is a closet essential. Perfect for mixing and matching, this long-sleeve tee is a year round favorite.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "Pull-On French Terry Joggers",
@@ -177,7 +177,7 @@ db.once('open', async () => {
       category: "pants",
       price: 15.95,
       description: "Crafted in a soft cotton blend, these easy on joggers are perfect for everyday.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "Straight Leg Indigo Wash Jeans",
@@ -186,16 +186,16 @@ db.once('open', async () => {
       category: "pants",
       price: 15.95,
       description: "Signature wash jeans featuring a relaxed, straight leg that pairs with everything! Crafted of soft, stretch denim with an adjustable waistband for comfortable style.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "Camo Pull-On French Terry Joggers",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700593013/Camo_Pull-On_French_Terry_Joggers_xynf8j.webp",
       gender: "boys",
       category: "pants",
-      price: 15.95,
+      price: 19.95,
       description: "Camo Pull-On French Terry Joggers.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
     },
     {
       name: "Everyday Pull-On Pants",
@@ -204,16 +204,16 @@ db.once('open', async () => {
       category: "pants",
       price: 15.95,
       description: "Perfect for today, tomorrow and yesterday, these easy on pants are perfect for your active one.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "Pull-On Corduroy Pants",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700593025/Pull-On_Corduroy_Pants_giwl3m.jpg",
       gender: "boys",
       category: "pants",
-      price: 15.95,
+      price: 19.95,
       description: "Designed with an easy on waistband and functional drawstring, these corduroy pants are perfect for your active boy.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
     },
     {
       name: "2-Piece Tiger Pullover & Jogger Set",
@@ -231,7 +231,7 @@ db.once('open', async () => {
       category: "onesies",
       price: 15.95,
       description: "Complete with a fun lion design and interactive front paws, this super cool tee pairs with pull-on joggers for an everyday look.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "2-Piece Pullover & Jogger Set",
@@ -240,25 +240,25 @@ db.once('open', async () => {
       category: "onesies",
       price: 15.95,
       description: "Made to match, this set is complete with a cute pullover to pair with easy-on joggers.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "2-Piece Baseball Henley Tee & Jogger Set",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700593823/2-Piece_Baseball_Henley_Tee_Jogger_Set_nntfwm.webp",
       gender: "boys",
       category: "onesies",
-      price: 15.95,
+      price: 19.95,
       description: "Perfect for your little slugger, this baseball henley pairs with easy on joggers for a ready-to-go outfit.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
     },
     {
       name: "2-Piece Striped Pullover & Pant Set",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700593824/2-Piece_Striped_Pullover_Pant_Set_rw3dlm.webp",
       gender: "boys",
       category: "onesies",
-      price: 15.95,
+      price: 19.95,
       description: "Crafted in cozy fleece and made to match, this set is complete with a striped pullover and a pair of easy on pants.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
     },
     {
       name: "2-Piece Hooded Jersey Tee & Legging Set",
@@ -267,7 +267,7 @@ db.once('open', async () => {
       category: "onesies",
       price: 15.95,
       description: "Made to match, this set is complete with a hooded jersey tee and a pair of coordinating easy-on leggings.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "2-Piece Fuzzy Pullover & Legging Set",
@@ -276,7 +276,7 @@ db.once('open', async () => {
       category: "onesies",
       price: 15.95,
       description: "Crafted in fuzzy velboa, this hooded pullover pairs with stretchy leggings for a comfy outfit.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "2-Piece Floral Top & Legging Set",
@@ -285,115 +285,115 @@ db.once('open', async () => {
       category: "onesies",
       price: 15.95,
       description: "Crafted in a soft cotton blend, this long-sleeve top sits pretty over a pair of coordinating stretch leggings.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
       name: "2-Piece Apple Outfit Set",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700594134/2-Piece_Apple_Outfit_Set_ccx2au.jpg",
       gender: "girls",
       category: "onesies",
-      price: 15.95,
+      price: 34.95,
       description: "Crafted in soft cotton, this matching set is complete with a long-sleeve apple top and a cozy pair of pants.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/8wM9E5aeR7xr8SIdQU"
     },
     {
       name: "2-Piece Fuzzy Pullover & Floral Legging Set",
       img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700594139/2-Piece_Fuzzy_Pullover_Floral_Legging_Set_gyg1jk.jpg",
       gender: "girls",
       category: "onesies",
-      price: 15.95,
+      price: 19.95,
       description: "Crafted in fuzzy velboa, this hooded pullover pairs with stretchy leggings for a comfy outfit.",
-      payBtn: ""
+      payBtn: "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
     },
     {
-      name: "",
-      img: "",
+      name: "Waffle Knit Drawstring Joggers",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700595431/Waffle_Knit_Drawstring_Joggers_gwc0bu.webp",
+      gender: "girls",
+      category: "pants",
+      price: 34.95,
+      description: "These cozy joggers are perfect for the winter season. Complete with super soft waffle knit and a drawstring waist for the perfect fit.",
+      payBtn: "https://buy.stripe.com/8wM9E5aeR7xr8SIdQU"
+    },
+    {
+      name: "Floral Print Stretch Jersey Leggings",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700595424/Toddler_Floral_Print_Stretch_Jersey_Leggings_iwkjqo.jpg",
       gender: "girls",
       category: "pants",
       price: 15.95,
-      description: "",
-      payBtn: ""
+      description: "Mix and match these printed leggings with all of her favorite fall tops and sweaters. Plus, in stretch jersey she'll stay comfy all day long.",
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
-      name: "",
-      img: "",
+      name: "Waffle Knit Drawstring Joggers",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700595431/Toddler_Waffle_Knit_Drawstring_Joggers_b1phjp.webp",
       gender: "girls",
       category: "pants",
       price: 15.95,
-      description: "",
-      payBtn: ""
+      description: "These cozy joggers are perfect for the winter season. Complete with super soft waffle knit and a drawstring waist for the perfect fit.",
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
-      name: "",
-      img: "",
+      name: "Elastic Waist Oceana Blue Wash Jeggings",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700595436/Toddler_Straight_Leg_Indigo_Wash_Jeans_jxh3dx.webp",
       gender: "girls",
       category: "pants",
       price: 15.95,
-      description: "",
-      payBtn: ""
+      description: "With a slimmer fit and added stretch for extra comfort, these durable jeggings feature an elastic waist so your little one is kept comfortable.",
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
-      name: "",
-      img: "",
+      name: "Lettuce Hem Rib Leggings",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700595425/Toddler_Lettuce_Hem_Rib_Leggings_csmpyi.webp",
       gender: "girls",
       category: "pants",
-      price: 15.95,
-      description: "",
-      payBtn: ""
+      price: 19.95,
+      description: "So cozy and super stylish, these lettuce hem leggings are the go-to piece for winter. Pair with the matching hoodie for extra flair.",
+      payBtn: "https://buy.stripe.com/cN27vX86J4lf9WMcMP"
     },
     {
-      name: "",
-      img: "",
-      gender: "girls",
-      category: "pants",
-      price: 15.95,
-      description: "",
-      payBtn: ""
-    },
-    {
-      name: "",
-      img: "",
+      name: "Striped Pullover Sweater",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700595100/Striped_Pullover_Sweater_lbdei4.jpg",
       gender: "girls",
       category: "shirts",
       price: 15.95,
-      description: "",
-      payBtn: ""
+      description: "This pullover sweater is so cozy for the winter weather. Throw over jeans and leggings for an outfit that's always in style.",
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
-      name: "",
-      img: "",
+      name: "Cardigan",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700595097/Cardigan_fhbiht.jpg",
+      gender: "girls",
+      category: "shirts",
+      price: 34.95,
+      description: "Crafted in soft cotton with sweet buttons up the front, this cardigan goes best over her favorite looks.",
+      payBtn: "https://buy.stripe.com/8wM9E5aeR7xr8SIdQU"
+    },
+    {
+      name: "Floral Graphic Tee",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700595086/Floral_Graphic_Tee_pxsp0q.webp",
       gender: "girls",
       category: "shirts",
       price: 15.95,
-      description: "",
-      payBtn: ""
+      description: "You can't go wrong with a graphic tee! Made with an OshKosh exclusive design and pairs perfectly with their favorite classic jean jacket.",
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
     {
-      name: "",
-      img: "",
+      name: "Soft Chenille Sweater",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700595086/Soft_Chenille_Sweater_rdqbgf.webp",
+      gender: "girls",
+      category: "shirts",
+      price: 34.95,
+      description: "So soft and cozy for the changing season, this simple sweater pairs well with everything.",
+      payBtn: "https://buy.stripe.com/8wM9E5aeR7xr8SIdQU"
+    },
+    {
+      name: "Peplum Pocket Tee",
+      img: "https://res.cloudinary.com/deqzppd4t/image/upload/v1700595098/Peplum_Pocket_Tee_uczvsj.jpg",
       gender: "girls",
       category: "shirts",
       price: 15.95,
-      description: "",
-      payBtn: ""
-    },
-    {
-      name: "",
-      img: "",
-      gender: "girls",
-      category: "shirts",
-      price: 15.95,
-      description: "",
-      payBtn: ""
-    },
-    {
-      name: "",
-      img: "",
-      gender: "girls",
-      category: "shirts",
-      price: 15.95,
-      description: "",
-      payBtn: ""
+      description: "Crafted in soft cotton with a peplum hem, this pocket tee is perfect for her.",
+      payBtn: "https://buy.stripe.com/bIY4jLfzb2d70mc28e"
     },
    
   ]);
