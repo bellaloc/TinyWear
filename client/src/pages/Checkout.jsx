@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import Auth from '../utils/auth'
+import PayButton from '../components/CheckoutBtn'
 
 const products = [
   {
@@ -131,12 +132,7 @@ export default function Example() {
                       <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                       <div className="mt-6">
                         {Auth.loggedIn() ? (   
-                        <a
-                          href="https://buy.stripe.com/test_6oE17Fa3d0Pm0dqaEE"
-                          className="flex items-center justify-center rounded-md border border-transparent bg-cyan-900 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-700"
-                        >
-                          Checkout
-                        </a>
+                         <PayButton cartItems = {cart.cartItems}/>
                         ) : (
                           <a
                           href="/signin"

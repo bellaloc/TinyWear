@@ -1,33 +1,27 @@
-const Stripe = require('stripe')
-const express = require('express')
-// env with stripe key
-require("dotenv")
-const stripe = Stripe(process.env.STRIPE_KEY)
+
+const express = require('express');
+const app = express();
+const stripe = require('stripe')('sk_test_51OCV4QCQg4jIgzVLmIXR1EHzyC683Sq3PFcYPir1dTubCZa9Gh72p07JztTuNc3RG4cFasNLBTQ9htQmXEXFbkD400VuGlJwX9')
 const router = express.Router()
-
-
-// Payment for Stripe creating sessions for checkout
 router.post('/create-checkout-session', async (req, res) => {
-    const session = await Stripe.checkout.sessions.create({
-      line_items:[
-        {
-          price_data: {
-            currency: 'usd', 
-            product_data: {
-              name: 'T-shirt', 
-            },
-            unit_amount: 2000,
+  const session = await stripe.checkout.sessions.create({
+    line_items: [
+      {
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: 'T-shirt',
           },
-        quantity: 1,
+          unit_amount: 2000,
         },
-      ],
-      mode: 'payment', 
-      success_url: '/success', 
-      cancel_url: '/',
-    });
+        quantity: 1,
+      },
+    ],
+    mode: 'payment',
+    success_url: '/login',
+    cancel_url: '/signin',
+  });
+  res.send({url: session.url});
+});
 
-    res.send({url: session.url})
-    console.log(session.url)
-  })
-
-module.exports = router;
+module.exports = router
