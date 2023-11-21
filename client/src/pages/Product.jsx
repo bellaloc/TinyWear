@@ -3,15 +3,11 @@ import React from 'react'
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
-// import { useEffect } from 'react'
 import Auth from '../utils/auth'
 import { useQuery } from '@apollo/client';
-
 import { useParams } from 'react-router-dom'
-
 import { QUERY_PRODUCT } from '../utils/queries.js'
 
-// import Auth from '../utils/auth';
 
 const SingleProduct = () => {
   const { productId } = useParams();
@@ -23,12 +19,40 @@ const { loading, data } = useQuery(QUERY_PRODUCT, {
 );
 
 const product = data?.product || {};
-console.log(data)
 
 
-// if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-//   return <Navigate to="/login" />;
-// }
+// LOCAL STORAGE FOR CART
+const addToCart = (e) => {
+  e.preventDefault()
+  // grab data needed for the object (console logging data)
+  // object of data
+    const saveToCart = {
+      price: product.price,
+      size: classe.sizes[2].name,
+      img: product.img,
+      name: product.name
+    }
+  // putting cart in local storage
+    // check local storage and make sure nothing is there (localStorage.getItem)
+    // assign variable to what's in local storage
+    var savedCart = JSON.parse(localStorage.getItem("savedCart"));
+    console.log(savedCart)
+      if (savedCart == null) {
+    // if nothing in local storage make variable (make it an array)
+    const savedCart = [];
+    savedCart.push(saveToCart);
+    // need to stringify the cart we're saving
+      localStorage.setItem("savedCart", JSON.stringify(savedCart));
+    // use push method to put the cart items into cart object (push method)
+    // add it to local storage (localStorage.setItem)
+      } else {
+        savedCart.push(saveToCart);
+        localStorage.setItem("savedCart", JSON.stringify(savedCart));
+        // console.log(savedCart)
+      }
+  }
+  
+
 
 // for reviews
 const reviews = { href: '#', average: 4, totalCount: 117 }
@@ -194,7 +218,8 @@ if(loading) {
                 Checkout
               </a>
               <a href='/signin' type="click"
-                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+                className="addToCart mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+                onClick={addToCart}
               >
                 Add To Cart
               </a>
