@@ -20,19 +20,25 @@ const Checkout = () => {
     }
   }
    
-
   const tokenHandler = (token) => {
     handleToken(100,token)
-  
 }
-
-
-
 
   const [open, setOpen] = useState(true)
 
+  // Total price
   var cartContent = JSON.parse(localStorage.getItem("savedCart"));
   console.log(cartContent);
+  let totalPrice = 0;
+  for ( const product of cartContent ) {
+    totalPrice += product.price
+  }
+  const fixedNum = Math.round(totalPrice*100)/100;
+ 
+  // const deleteHandler = (e) => {
+  //   e.preventDefault()
+  //   const item = e.target
+  // }
 
   return (
     <div className="flex min-h-full flex-1 lg:px-8 py-80 mb-44">
@@ -130,7 +136,7 @@ const Checkout = () => {
                     <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <p>Subtotal</p>
-                        <p>$262.00</p>
+                        <p>${fixedNum}</p>
                       </div>
                       <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                       <div className="mt-6">
@@ -138,7 +144,7 @@ const Checkout = () => {
                          <Stripe 
                            stripeKey='pk_test_51OCV4QCQg4jIgzVLeawWDTcJ9Ou3zt0wnGOox7ilt08BgACMZvtaDed0UWHiCNPllVpVxEntKFZYmFbIu1wUcrPz00fFKkMPJR'
                            token={tokenHandler}
-                           amount={cartContent.price}/>
+                           amount={totalPrice}/>
                         ) : (
                           <a
                           href="/signin"
@@ -151,10 +157,7 @@ const Checkout = () => {
                       </div>
                       <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                         <p>
-                             
                               <a href="/">
-
-                             
                           <button
                             type="button"
                             className="font-medium text-cyan-900 hover:text-cyan-700"
