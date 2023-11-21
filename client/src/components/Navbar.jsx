@@ -1,22 +1,24 @@
-// https://tailwindui.com/components/application-ui/navigation/navbars
 import logo from '../assets/images/logo/logo.png';
-
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
+import { Disclosure} from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import { Link } from 'react-router-dom'
+import Auth from '../utils/auth'
 const navigation = [
   { name: 'Log Out', href: '#', current: false },
-  // { name: 'Team', href: '#', current: false },
-  // { name: 'Projects', href: '#', current: false },
-  // { name: 'Calendar', href: '#', current: false },
 ]
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+  
+  const logout = (event) => {
+  event.preventDefault();
+  Auth.logout();
+};
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -35,21 +37,32 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
+           
+           
                 <div className="hidden sm:ml-6 sm:block">
-                  {/* logout button */}
+                 
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}>
-                        {item.name}
-                      </a>
-                    ))}
+                 
+              {Auth.loggedIn() ? (
+            <>
+             
+              <button className='bg-gray-900 text-white' onClick={logout} href='/signin'>
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link className='hover:text-white text-gray-400' to="/signin">
+                Sign In
+              </Link>
+              <Link className='hover:text-white text-gray-400' to="/signup">
+                Sign Up
+              </Link>
+            </>
+          )}
+                
+         
+                   
                   </div>
                 </div>
               {/* </div> */}
@@ -65,8 +78,18 @@ export default function Navbar() {
             </div>
             </a>
 
-            {/* cart icon */}
+           
+                {/* home image */}
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <a
+                key="/"
+                href="/"
+                className='mr-5 hover:text-white text-gray-400' >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                </svg>
+              </a>
+               {/* cart icon */}
               <a href="/checkout">
                 <button
                   type="button"

@@ -44,7 +44,21 @@ query Query($productId: ID!) {
 }
 `;
 
-
+export const QUERY_SHIRTS = gql`
+query Query($categoryId: ID!) {
+  products(categoryId: $categoryId) {
+    _id
+    name
+    img
+    gender
+    category {
+      _id
+    }
+    price
+    description
+    payBtn
+  }
+`;
 
 export const QUERY_CATEGORIES = gql`
   {
@@ -90,9 +104,7 @@ export const QUERY_ALL_PRODUCTS = gql`
       name
       img
       gender
-      category {
-        name
-      }
+      category
       price
       description
       payBtn

@@ -48,20 +48,8 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    products: async (parent, { category, name }) => {
-      const params = {};
-
-      if (category) {
-        params.category = category;
-      }
-
-      if (name) {
-        params.name = {
-          $regex: name
-        };
-      }
-
-      return await Product.find(params).populate('category');
+    products: async (parent, args) => {
+      return await Product.find()
     },
     product: async (parent, { productId }) => {
 
@@ -95,8 +83,8 @@ const resolvers = {
     }
   },
   Mutation: {
-    addUser: async (parent, args) => {
-      const user = await User.create(args);
+    addUser: async (parent, { email, password }) => {
+      const user = await User.create({  email, password });
       const token = signToken(user);
 
       return { token, user };

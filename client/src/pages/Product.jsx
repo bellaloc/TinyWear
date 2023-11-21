@@ -3,10 +3,10 @@ import React from 'react'
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
-
+import Auth from '../utils/auth'
 import { useQuery } from '@apollo/client';
-
 import { useParams } from 'react-router-dom'
+import { QUERY_PRODUCT } from '../utils/queries.js'
 
 import { QUERY_PRODUCT } from '../utils/queries.js'
 
@@ -22,12 +22,40 @@ const { loading, data } = useQuery(QUERY_PRODUCT, {
 );
 
 const product = data?.product || {};
-console.log(data)
 
 
-// if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-//   return <Navigate to="/login" />;
-// }
+// LOCAL STORAGE FOR CART
+const addToCart = (e) => {
+  e.preventDefault()
+  // grab data needed for the object (console logging data)
+  // object of data
+    const saveToCart = {
+      price: product.price,
+      size: classe.sizes[2].name,
+      img: product.img,
+      name: product.name
+    }
+  // putting cart in local storage
+    // check local storage and make sure nothing is there (localStorage.getItem)
+    // assign variable to what's in local storage
+    var savedCart = JSON.parse(localStorage.getItem("savedCart"));
+    console.log(savedCart)
+      if (savedCart == null) {
+    // if nothing in local storage make variable (make it an array)
+    const savedCart = [];
+    savedCart.push(saveToCart);
+    // need to stringify the cart we're saving
+      localStorage.setItem("savedCart", JSON.stringify(savedCart));
+    // use push method to put the cart items into cart object (push method)
+    // add it to local storage (localStorage.setItem)
+      } else {
+        savedCart.push(saveToCart);
+        localStorage.setItem("savedCart", JSON.stringify(savedCart));
+        // console.log(savedCart)
+      }
+  }
+  
+
 
 // for reviews
 const reviews = { href: '#', average: 4, totalCount: 117 }
@@ -35,40 +63,30 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-// for colors and sizes
+// for and sizes
 const classe = {
-  colors: [
-    { name: 'White', class: 'bg-white', selectedClass: 'ring-gray-400' },
-    { name: 'Gray', class: 'bg-gray-200', selectedClass: 'ring-gray-400' },
-    { name: 'Black', class: 'bg-gray-900', selectedClass: 'ring-gray-900' },
-  ],
   sizes: [
     { name: 'T2', inStock: true },
     { name: 'T3', inStock: true },
     { name: 'T4', inStock: true },
   ],
 }
-
-// const [selectedColor, setSelectedColor] = useState(product.colors[0])
 const [selectedSize, setSelectedSize] = useState(classe.sizes[2])
 
 if(loading) {
   return <div>Loading...</div>
 }
   return (
-    <>
    
-    
+    <>
     <div className="bg-white">
-    
-      
         <div className="pt-6">
         {/* Product Image */}
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-          <div className="aspect-h-4 aspect-w-3 overflow-hidden rounded-lg lg:block">
+          <div className="aspect-h-4 aspect-w-3 overflow-hidden lg:block pb-5">
             <img
               src={product.img}
-              className="h-full w-full object-cover object-center"
+              className="h-full w-full object-cover object-center rounded-lg"
             /> 
           </div>
           <div className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
@@ -116,41 +134,6 @@ if(loading) {
             </div>
 
             <form className="mt-10">
-              {/* Colors */}
-              {/* <div>
-                <h3 className="text-sm font-medium text-gray-900">Color</h3>
-                <RadioGroup value={selectedColor} onChange={setSelectedColor} className="mt-4">
-                  <RadioGroup.Label className="sr-only">Choose a color</RadioGroup.Label>
-                  <div className="flex items-center space-x-3">
-                    {product.colors.map((color) => (
-                      <RadioGroup.Option
-                        key={color.name}
-                        value={color}
-                        className={({ active, checked }) =>
-                          classNames(
-                            color.selectedClass,
-                            active && checked ? 'ring ring-offset-1' : '',
-                            !active && checked ? 'ring-2' : '',
-                            'relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 focus:outline-none'
-                          )
-                        }
-                      >
-                        <RadioGroup.Label as="span" className="sr-only">
-                          {color.name}
-                        </RadioGroup.Label>
-                        <span
-                          aria-hidden="true"
-                          className={classNames(
-                            color.class,
-                            'h-8 w-8 rounded-full border border-black border-opacity-10'
-                          )}
-                        />
-                      </RadioGroup.Option>
-                    ))}
-                  </div>
-                </RadioGroup>
-              </div> */}
-
               {/* Sizes */}
               <div className="mt-10">
                 <div className="flex items-center justify-between">
@@ -212,36 +195,46 @@ if(loading) {
                   </div>
                 </RadioGroup>
               </div>
+              {Auth.loggedIn() ? (
+                <>
               <a href={product.payBtn}
-            
                 type="click"
-                
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
               >
                 Checkout
-              
               </a>
+              <a 
+                // href={product.payBtn}
+                type="click"
+                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+              >
+                Add To Cart
+              </a>
+              </>
+              ) : (
+                <>
+                <a href='/signin'
+                type="click"
+                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+              >
+                Checkout
+              </a>
+              <a href='/signin' type="click"
+                className="addToCart mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+                onClick={addToCart}
+              >
+                Add To Cart
+              </a>
+              </>
+              )}
             </form>
           </div>
-
           </div>
-          
-
-          
         </div>
-
           </div>
-
         </div>
-
-        
       </div>
-
-
     </div>
-
-
-      
       </>   
   )
 }

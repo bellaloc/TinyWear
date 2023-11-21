@@ -1,5 +1,8 @@
-import Card from "../components/Card";
-import { Fragment, useState } from 'react'
+import { useQuery } from '@apollo/client';
+import { QUERY_ALL_PRODUCTS } from '../utils/queries.js'
+
+// sidebar
+import { Fragment } from 'react'
 import {  Disclosure, Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon,  MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
 
@@ -9,9 +12,28 @@ const sortOptions = [
 ]
 
 
-const Home = () => {
+const OnesieCard= () => {
+ 
+const { loading, data } = useQuery(QUERY_ALL_PRODUCTS,
+    {
+        variables: { category: "onesies" },
+    });
+  
+const products = data?.products || [];
 
- return (
+
+const onesies = products.filter((onesies) => onesies.category == "onesies");
+console.log(onesies)
+
+// function filterProducts() {
+//   if (!currentCategory) {
+//     return state.products;
+//   }
+
+//   return state.products.filter(product => product.category._id === currentCategory);
+// }
+
+return (
   <div className="bg-white">
   <div>
    
@@ -87,13 +109,29 @@ const Home = () => {
           <form className="hidden lg:block">
             <h3 className="sr-only">Categories</h3>
            
-
-            
-              <a href="/category/shirts">
-              <Disclosure as="div" href="http://localhost:3000/category/shirts" className="border-b border-gray-200 py-6">
+            <a href="/">
+              <Disclosure as="div" href="/" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button href='/category/"shirts"'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <Disclosure.Button href='/'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                        <span className="font-medium text-gray-900">All</span>
+                        <span className="ml-6 flex items-center">
+                          {open ? (
+                            <MinusIcon className="h-5 w-5" aria-hidden="true" />
+                          ) : (
+                            <PlusIcon className="h-5 w-5" aria-hidden="true" />
+                          )}
+                        </span>
+                      </Disclosure.Button>
+                    </h3>
+                )}
+              </Disclosure>
+            </a>
+            <a href="/category/shirts">
+              <Disclosure as="div" href="/category/shirts" className="border-b border-gray-200 py-6">
+                {({ open }) => (
+                    <h3 className="-my-3 flow-root">
+                      <Disclosure.Button href='/category/shirts'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         <span className="font-medium text-gray-900">Shirts</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
@@ -108,10 +146,10 @@ const Home = () => {
               </Disclosure>
             </a>
 <a href="/category/pants">
-              <Disclosure as="div" href="http://localhost:3000/category/pants" className="border-b border-gray-200 py-6">
+              <Disclosure as="div" href="/category/pants" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button href='/category/"655b0445c80d4cb8a138cc0a"'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <Disclosure.Button href='/category/"pants"'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         <span className="font-medium text-gray-900">Pants</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
@@ -124,11 +162,12 @@ const Home = () => {
                     </h3>
                 )}
               </Disclosure>
-            </a><a href="/category/onesies">
-              <Disclosure as="div" href="http://localhost:3000/category/onesies" className="border-b border-gray-200 py-6">
+            </a>
+            <a href="/category/onesies">
+              <Disclosure as="div" href="/category/pants" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button href='/category/"onesies"'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <Disclosure.Button href='/category/onesies'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         <span className="font-medium text-gray-900">Onesies</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
@@ -147,19 +186,45 @@ const Home = () => {
 
 
           {/* Product grid */}
-          <Card /> 
-
+  
+    {loading ? (
+    <div> loading... </div>
+    ) : (
+      <div className="lg:col-span-3">
+      <div className="bg-white">
+        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+          <h2 className="sr-only">Products</h2>
+          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+            
+                {onesies.map(onesie => (
+                  <a key={onesie._id} href={`/product/${onesie._id}`} className="group">
+                    <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                      <img
+                        src={onesie.img}
+                        className="h-full w-full object-cover object-center group-hover:opacity-75"
+                      />
+                    </div>
+                    <h3 className="mt-4 text-sm text-gray-700">{onesie.name}</h3>
+                    <p className="mt-1 text-lg font-medium text-gray-900">{onesie.price}</p>
+                    
+                  </a>
+              )) }
+                   
+              </div>
+            </div>
         </div>
+    </div>
+  )}
+    </div>
       </section>
     </main>
   </div>
 </div>
 
-
-)
-
+  )
 }
 
 
 
-export default Home;
+
+export default OnesieCard
