@@ -2,9 +2,33 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import Auth from '../utils/auth'
+import React from 'react'
+import axios from 'axios'
+import Stripe from "react-stripe-checkout"
 
 
 const Checkout = () => {
+
+    const handleToken = (totalAmount, token) => {
+    try {
+      axios.post("http://localhost:3001/api/stripe/pay", {
+        token: token.id,
+        amount: totalAmount
+      });
+    } catch (error) {
+      console.log(error)
+    }
+  }
+   
+
+  const tokenHandler = (token) => {
+    handleToken(100,token)
+  
+}
+
+
+
+
   const [open, setOpen] = useState(true)
 
   var cartContent = JSON.parse(localStorage.getItem("savedCart"));
@@ -111,18 +135,17 @@ const Checkout = () => {
                       <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                       <div className="mt-6">
                         {Auth.loggedIn() ? (   
-                        <a
-                          href="https://buy.stripe.com/test_6oE17Fa3d0Pm0dqaEE"
-                          className="flex items-center justify-center rounded-md border border-transparent bg-cyan-900 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-700"
-                        >
-                          Checkout
-                        </a>
+                         <Stripe 
+                           stripeKey='pk_test_51OCV4QCQg4jIgzVLeawWDTcJ9Ou3zt0wnGOox7ilt08BgACMZvtaDed0UWHiCNPllVpVxEntKFZYmFbIu1wUcrPz00fFKkMPJR'
+                           token={tokenHandler}
+                           amount={cartContent.price}/>
                         ) : (
                           <a
                           href="/signin"
                           className="flex items-center justify-center rounded-md border border-transparent bg-cyan-900 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-700"
                         >
                           Checkout
+
                         </a>
                         )}
                       </div>
