@@ -205,28 +205,29 @@ if(loading) {
               >
                 Checkout
               </a>
-              <a 
+              <button  
                 // href={product.payBtn}
                 type="click"
+                onClick={addToCart}
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
               >
                 Add To Cart
-              </a>
+              </button>
               </>
               ) : (
                 <>
-                <a href='/signin'
+                <button href='/signin'
                 type="click"
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
               >
                 Checkout
-              </a>
-              <a href='/signin' type="click"
+              </button>
+              <button href='/signin' type="click"
                 className="addToCart mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
-                onClick={addToCart}
+              
               >
                 Add To Cart
-              </a>
+              </button>
               </>
               )}
             </form>
