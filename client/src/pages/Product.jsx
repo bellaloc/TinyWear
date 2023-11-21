@@ -21,38 +21,46 @@ const { loading, data } = useQuery(QUERY_PRODUCT, {
 const product = data?.product || {};
 
 
-// Putting cart in local storage
+// LOCAL STORAGE FOR CART
 const addToCart = (e) => {
   e.preventDefault()
-
+  // grab data needed for the object (console logging data)
+  // object of data
     const saveToCart = {
       price: product.price,
       size: classe.sizes[2].name,
       img: product.img,
       name: product.name
     }
+  // putting cart in local storage
+    // check local storage and make sure nothing is there (localStorage.getItem)
+    // assign variable to what's in local storage
     var savedCart = JSON.parse(localStorage.getItem("savedCart"));
     console.log(savedCart)
       if (savedCart == null) {
+    // if nothing in local storage make variable (make it an array)
     const savedCart = [];
     savedCart.push(saveToCart);
-
+    // need to stringify the cart we're saving
       localStorage.setItem("savedCart", JSON.stringify(savedCart));
-
+    // use push method to put the cart items into cart object (push method)
+    // add it to local storage (localStorage.setItem)
       } else {
         savedCart.push(saveToCart);
         localStorage.setItem("savedCart", JSON.stringify(savedCart));
+        // console.log(savedCart)
       }
   }
   
 
-// For reviews
+
+// for reviews
 const reviews = { href: '#', average: 4, totalCount: 117 }
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-// For sizes
+// for and sizes
 const classe = {
   sizes: [
     { name: 'T2', inStock: true },
@@ -63,7 +71,11 @@ const classe = {
 const [selectedSize, setSelectedSize] = useState(classe.sizes[2])
 
 if(loading) {
-  return <div>Loading...</div>
+  return <div className=" mt-80 mb-80 flex items-center justify-center bg-midnight inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+  role="status">
+  <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Loading...</span>
+</div>
+  // <div>Loading...</div>
 }
   return (
    
