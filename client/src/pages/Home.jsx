@@ -2,6 +2,7 @@ import Card from "../components/Card";
 import { Fragment, useState } from 'react'
 import {  Disclosure, Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon,  MinusIcon, PlusIcon } from '@heroicons/react/20/solid'
+import '../App.css';
 
 const sortOptions = [
   { name: 'Price: Low to High', href: '#', current: false },
@@ -21,13 +22,13 @@ const Home = () => {
         <div className="flex items-center">
           <Menu as="div" className="relative inline-block text-left">
             <div>
-              <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
+              {/* <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
                 Sort
                 <ChevronDownIcon
                   className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                   aria-hidden="true"
                 />
-              </Menu.Button>
+              </Menu.Button> */}
             </div>
 
             <Transition
@@ -76,7 +77,7 @@ const Home = () => {
               <Disclosure as="div" href="http://localhost:3000/category/shirts" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button href='/category/"shirts"'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <Disclosure.Button href='/category/"shirts"'className="shirts flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         <span className="font-medium text-gray-900">Shirts</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
@@ -94,7 +95,7 @@ const Home = () => {
               <Disclosure as="div" href="http://localhost:3000/category/pants" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button href='/category/"655b0445c80d4cb8a138cc0a"'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                      <Disclosure.Button href='/category/"655b0445c80d4cb8a138cc0a"'className="pants flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         <span className="font-medium text-gray-900">Pants</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
@@ -111,8 +112,8 @@ const Home = () => {
               <Disclosure as="div" href="http://localhost:3000/category/onesies" className="border-b border-gray-200 py-6">
                 {({ open }) => (
                     <h3 className="-my-3 flow-root">
-                      <Disclosure.Button href='/category/"onesies"'className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
-                        <span className="font-medium text-gray-900">Onesies</span>
+                      <Disclosure.Button href='/category/"onesies"'className="sets flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                        <span className="font-medium text-gray-900">Sets</span>
                         <span className="ml-6 flex items-center">
                           {open ? (
                             <MinusIcon className="h-5 w-5" aria-hidden="true" />
