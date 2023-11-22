@@ -5,6 +5,7 @@ import Auth from '../utils/auth'
 import React from 'react'
 import axios from 'axios'
 import Stripe from "react-stripe-checkout"
+import '../App.css';
 
 
 const Checkout = () => {
@@ -138,6 +139,7 @@ const Checkout = () => {
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <p>Subtotal</p>
                         <p>${fixedNum}</p>
+                        {/* <p>${cartContent.price}</p> */}
                       </div>
                       <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
                       <div className="mt-6">
