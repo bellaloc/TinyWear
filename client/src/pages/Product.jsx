@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
@@ -7,6 +6,7 @@ import Auth from '../utils/auth'
 import { useQuery } from '@apollo/client';
 import { useParams } from 'react-router-dom'
 import { QUERY_PRODUCT } from '../utils/queries.js'
+import '../App.css';
 
 
 const SingleProduct = () => {
@@ -21,46 +21,39 @@ const { loading, data } = useQuery(QUERY_PRODUCT, {
 const product = data?.product || {};
 
 
-// LOCAL STORAGE FOR CART
+
+// Putting cart in local storage
 const addToCart = (e) => {
   e.preventDefault()
-  // grab data needed for the object (console logging data)
-  // object of data
+
     const saveToCart = {
       price: product.price,
       size: classe.sizes[2].name,
       img: product.img,
       name: product.name
     }
-  // putting cart in local storage
-    // check local storage and make sure nothing is there (localStorage.getItem)
-    // assign variable to what's in local storage
     var savedCart = JSON.parse(localStorage.getItem("savedCart"));
     console.log(savedCart)
       if (savedCart == null) {
-    // if nothing in local storage make variable (make it an array)
     const savedCart = [];
     savedCart.push(saveToCart);
-    // need to stringify the cart we're saving
+
       localStorage.setItem("savedCart", JSON.stringify(savedCart));
-    // use push method to put the cart items into cart object (push method)
-    // add it to local storage (localStorage.setItem)
+
       } else {
         savedCart.push(saveToCart);
         localStorage.setItem("savedCart", JSON.stringify(savedCart));
-        // console.log(savedCart)
       }
   }
   
 
-
-// for reviews
+// For reviews
 const reviews = { href: '#', average: 4, totalCount: 117 }
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-// for and sizes
+// For sizes
 const classe = {
   sizes: [
     { name: 'T2', inStock: true },
@@ -71,11 +64,14 @@ const classe = {
 const [selectedSize, setSelectedSize] = useState(classe.sizes[2])
 
 if(loading) {
-  return <div className=" mt-80 mb-80 flex items-center justify-center bg-midnight inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
-  role="status">
-  <span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Loading...</span>
-</div>
-  // <div>Loading...</div>
+  return <div>Loading...
+    <div class="loader">
+      <span class="loader__element"></span>
+      <span class="loader__element"></span>
+      <span class="loader__element"></span>
+    </div>
+
+  </div>
 }
   return (
    
@@ -206,29 +202,28 @@ if(loading) {
               >
                 Checkout
               </a>
-              <button  
+              <a 
                 // href={product.payBtn}
                 type="click"
-                onClick={addToCart}
-                className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+                className="mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
               >
                 Add To Cart
-              </button>
+              </a>
               </>
               ) : (
                 <>
-                <button href='/signin'
+                <a href='/signin'
                 type="click"
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
               >
                 Checkout
-              </button>
-              <button href='/signin' type="click"
-                className="addToCart mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
-              
+              </a>
+              <a href='/signin' type="click"
+                className="addToCart mt-5 flex w-full items-center justify-center rounded-md border border-transparent bg-cyan-900 px-8 py-3 text-base font-medium text-white hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-700 focus:ring-offset-2"
+                onClick={addToCart}
               >
                 Add To Cart
-              </button>
+              </a>
               </>
               )}
             </form>
@@ -245,7 +240,3 @@ if(loading) {
 
 
 export default SingleProduct;
-
-
-
-
